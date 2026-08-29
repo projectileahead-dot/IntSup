@@ -380,10 +380,15 @@
     .roadmapPanel .valueRow:not(:last-child):after{content:"›";position:absolute;z-index:3;top:7px;right:-15px;color:#1d4ed8;font-size:28px;font-weight:700;line-height:1}
     .roadmapPanel .valueRow b{font-size:14px}.roadmapPanel .valueRow p{margin-top:7px;font-size:12px;line-height:1.55}
     .sectionChatCta{display:flex;justify-content:center;margin-top:26px}.sectionChatCta .btn{min-width:230px;border-radius:12px;background:linear-gradient(120deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.2)}
+    .freeKitDialog{grid-template-columns:.82fr 1.18fr;width:min(780px,100%);border-color:#93b4ff}
+    .freeKitVisual{display:grid;align-content:center;gap:18px;min-height:430px;padding:36px;background:#0f1730;color:#fff}.freeKitVisual>span{color:#8fb2ff;font-size:10px;font-weight:800;text-transform:uppercase}.freeKitVisual>strong{max-width:8ch;font:800 40px/1.02 Manrope,sans-serif}.freeKitPath{display:grid;gap:8px}.freeKitPath span{padding:9px 10px;border-left:3px solid #60a5fa;background:rgba(255,255,255,.08);font-size:11px;font-weight:700}
+    .freeKitPrice{display:flex;align-items:end;gap:12px;margin-top:20px}.freeKitPrice del{color:#8a94a8;font-size:18px;font-weight:700}.freeKitPrice strong{color:#1d4ed8;font:800 42px/1 Manrope,sans-serif}
+    .freeKitList{display:grid;gap:8px;margin:18px 0 0;padding:0;list-style:none}.freeKitList li{display:flex;gap:8px;color:#526079;font-size:12px;line-height:1.55}.freeKitList li:before{content:"\2713";color:#2563eb;font-weight:900}
+    .freeKitDialog .popupAction{width:100%}
     @media(min-width:901px){.hero{min-height:760px}}
     @keyframes counterGlow{50%{transform:translateY(-4px);background:#2563eb}100%{transform:none}}
     @media(max-width:900px){.hero{grid-template-columns:1fr;gap:0;padding-top:58px}.heroCopy{padding-bottom:20px}.heroVisual{justify-items:center}.journeyInner{grid-template-columns:1fr}.journeyClaim{text-align:left}}
-    @media(max-width:720px){.hero{padding:48px 18px 0;background:radial-gradient(520px 330px at 95% 5%,rgba(59,130,246,.25),transparent 68%),linear-gradient(145deg,#0f1730,#14234a)}h1{font-size:clamp(46px,14vw,64px)}.heroJourney{padding:16px 12px 18px}.heroJourneyTrack{grid-template-columns:repeat(2,1fr);gap:24px 10px}.heroJourneyTrack:before{display:none}.statsBand{padding:18px 14px 44px;gap:10px}.journey{padding:52px 14px}.journeySteps{grid-template-columns:1fr}.journeyStep,.journeyStep:first-child{min-height:66px;padding:22px 16px 18px 62px;border-top:1px solid var(--line);border-left:0;text-align:left;justify-content:start;clip-path:none}.journeyStep:first-child{border-top:0}.journeyStep:before{top:50%;left:18px;transform:translateY(-50%)}.sectionInner{width:min(100% - 28px,1160px);padding:68px 0}.painSection{padding:68px 0}.problemVideoBand{border-radius:14px}.introVideoFrame{margin:12px;padding:10px;border-radius:15px}.introVideoHeader b{font-size:14px}.introVideoFooter{gap:8px;font-size:10px}.plans{gap:18px}.planCard{padding:24px}.planCard.recommended{transform:none}.offerPanel .valueRow{border-radius:12px}.roadmapPanel .valueList{grid-template-columns:1fr;gap:12px;padding-left:54px!important}.roadmapPanel .valueList:before{top:18px;bottom:18px;left:23px;right:auto;width:3px;height:auto;transform:scaleY(0);transform-origin:top}.roadmapPanel.is-visible .valueList:before{transform:scaleY(1)}.roadmapPanel .valueRow{min-height:104px;padding:17px 16px;text-align:left}.roadmapPanel .valueIcon{top:50%;left:-51px;width:44px;height:44px;transform:translateY(-50%);border-width:4px}.roadmapPanel .valueRow:not(:last-child):after{display:none}.syllabusGrid{grid-template-columns:1fr}.syllabusCol summary{padding:20px}.syllabusCol ul{padding:18px 20px 22px!important}.ctaFinal{border-radius:14px}.sectionChatCta .btn{width:100%}}
+    @media(max-width:720px){.hero{padding:48px 18px 0;background:radial-gradient(520px 330px at 95% 5%,rgba(59,130,246,.25),transparent 68%),linear-gradient(145deg,#0f1730,#14234a)}h1{font-size:clamp(46px,14vw,64px)}.heroJourney{padding:16px 12px 18px}.heroJourneyTrack{grid-template-columns:repeat(2,1fr);gap:24px 10px}.heroJourneyTrack:before{display:none}.statsBand{padding:18px 14px 44px;gap:10px}.journey{padding:52px 14px}.journeySteps{grid-template-columns:1fr}.journeyStep,.journeyStep:first-child{min-height:66px;padding:22px 16px 18px 62px;border-top:1px solid var(--line);border-left:0;text-align:left;justify-content:start;clip-path:none}.journeyStep:first-child{border-top:0}.journeyStep:before{top:50%;left:18px;transform:translateY(-50%)}.sectionInner{width:min(100% - 28px,1160px);padding:68px 0}.painSection{padding:68px 0}.problemVideoBand{border-radius:14px}.introVideoFrame{margin:12px;padding:10px;border-radius:15px}.introVideoHeader b{font-size:14px}.introVideoFooter{gap:8px;font-size:10px}.plans{gap:18px}.planCard{padding:24px}.planCard.recommended{transform:none}.offerPanel .valueRow{border-radius:12px}.roadmapPanel .valueList{grid-template-columns:1fr;gap:12px;padding-left:54px!important}.roadmapPanel .valueList:before{top:18px;bottom:18px;left:23px;right:auto;width:3px;height:auto;transform:scaleY(0);transform-origin:top}.roadmapPanel.is-visible .valueList:before{transform:scaleY(1)}.roadmapPanel .valueRow{min-height:104px;padding:17px 16px;text-align:left}.roadmapPanel .valueIcon{top:50%;left:-51px;width:44px;height:44px;transform:translateY(-50%);border-width:4px}.roadmapPanel .valueRow:not(:last-child):after{display:none}.freeKitDialog{grid-template-columns:1fr}.freeKitVisual{display:none}.freeKitDialog .popupBody{padding:34px 22px 24px}.freeKitPrice strong{font-size:38px}.syllabusGrid{grid-template-columns:1fr}.syllabusCol summary{padding:20px}.syllabusCol ul{padding:18px 20px 22px!important}.ctaFinal{border-radius:14px}.sectionChatCta .btn{width:100%}}
     @media(max-width:420px){.ctaRow{grid-template-columns:1fr}.btn{width:100%}.statsBand{grid-template-columns:1fr 1fr}.stat{padding:16px}.stat b{font-size:22px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack{animation:none}.btn{transition:none}.focusVisual .donut,.focusVisual .focusLegend>div,.chartGrid .miniChart,.roadmapPanel .valueRow{opacity:1;transform:none;transition:none}.chartGrid .column i{height:calc(var(--v)*1%);transition:none}.roadmapPanel .valueList:before{transform:none;transition:none}.popupOverlay,.popupDialog{animation:none}}
   </style>
@@ -676,6 +681,25 @@
     </section>
   </div>
 
+  <div class="popupOverlay" id="jobKitPopup" hidden>
+    <section class="popupDialog freeKitDialog" role="dialog" aria-modal="true" aria-labelledby="jobKitPopupTitle">
+      <button class="popupClose" type="button" data-popup-close aria-label="Close free job kit popup">×</button>
+      <div class="freeKitVisual" aria-hidden="true">
+        <span>Free career resource</span>
+        <strong>Find your next job</strong>
+        <div class="freeKitPath"><span>Map your skills</span><span>Curate designations</span><span>Build your profile</span><span>Network and apply</span></div>
+      </div>
+      <div class="popupBody">
+        <span class="popupKicker">Your free job-search kit</span>
+        <h2 class="popupTitle" id="jobKitPopupTitle">Turn your skills into your next job.</h2>
+        <p class="popupCopy">Use this practical kit to choose suitable designations, create a stronger profile, build the right network, and approach your next opportunity with clarity.</p>
+        <div class="freeKitPrice"><del>₹299</del><strong>FREE</strong></div>
+        <ul class="freeKitList"><li>Curate job designations that match your skills</li><li>Create a focused professional profile</li><li>Build and use your career network</li><li>Plan the steps to land your next job</li></ul>
+        <div class="popupActions"><a class="popupAction primary" href="https://projectileahead-dot.github.io/IntSup/ISP/" target="_blank" rel="noopener">Save the kit</a></div>
+      </div>
+    </section>
+  </div>
+
   <div class="popupOverlay" id="videoPlayerPopup" hidden>
     <section class="popupDialog videoDialog" role="dialog" aria-modal="true" aria-labelledby="videoPlayerTitle">
       <button class="popupClose" type="button" data-popup-close aria-label="Close video player">×</button>
@@ -731,6 +755,9 @@
     var activePopup=null;
     var popupReturnFocus=null;
     var offerTicker=null;
+    var jobKitTimer=null;
+    var jobKitActiveMs=0;
+    var jobKitStartedAt=0;
     var pendingPopup=null;
     var shownPopups={};
 
@@ -740,6 +767,29 @@
 
     function popupSessionSet(key,value){
       try{sessionStorage.setItem(key,value);}catch(error){}
+    }
+
+    function pauseJobKitTimer(){
+      if(!jobKitStartedAt)return;
+      jobKitActiveMs+=Date.now()-jobKitStartedAt;
+      jobKitStartedAt=0;
+      clearTimeout(jobKitTimer);
+      popupSessionSet('pbJobKitActiveMs',String(jobKitActiveMs));
+    }
+
+    function showJobKitPopup(){
+      pauseJobKitTimer();
+      jobKitActiveMs=120000;
+      popupSessionSet('pbJobKitActiveMs',String(jobKitActiveMs));
+      popupSessionSet('pbJobKitShown','1');
+      openPopup('jobKitPopup');
+    }
+
+    function scheduleJobKitPopup(){
+      if(document.hidden||popupSessionGet('pbJobKitShown')==='1')return;
+      clearTimeout(jobKitTimer);
+      jobKitStartedAt=Date.now();
+      jobKitTimer=setTimeout(showJobKitPopup,Math.max(0,120000-jobKitActiveMs));
     }
 
     function closePopup(){
@@ -849,6 +899,13 @@
 
     observePopupTrigger('#proof .sectionTitle','proofPopup');
     observePopupTrigger('#guarantees .sectionTitle','offerPopup');
+
+    jobKitActiveMs=Math.max(0,Number(popupSessionGet('pbJobKitActiveMs'))||0);
+    scheduleJobKitPopup();
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){pauseJobKitTimer();}else{scheduleJobKitPopup();}
+    });
+    window.addEventListener('beforeunload',pauseJobKitTimer);
 
     var existingOfferDeadline=Number(popupSessionGet('pbGoldOfferDeadline'));
     if(existingOfferDeadline>Date.now()){
