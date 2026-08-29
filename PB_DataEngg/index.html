@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PB Data Engineering | Become a Data Engineer</title>
+  <meta name="description" content="A persuasive single-page website for PB Data Engineering: proof, outcomes, support, curriculum, plans, and guarantees." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0a3140;
+      --navy2:#071f2a;
+      --gold:#c39a57;
+      --gold2:#f5e3b6;
+      --paper:#f7f2e9;
+      --card:#ffffff;
+      --text:#18242a;
+      --muted:#65757c;
+      --line:#e7dbca;
+      --green:#1f9f67;
+      --shadow:0 26px 70px rgba(10,49,64,.14);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:
+      radial-gradient(circle at 12% 0%,rgba(195,154,87,.16),transparent 24%),
+      radial-gradient(circle at 100% 0%,rgba(10,49,64,.16),transparent 28%),
+      linear-gradient(180deg,#f7f2e8 0%,#faf7f0 52%,#f5efe4 100%);}
+    a{color:inherit}
+    .page{width:min(1220px,92vw);margin:auto;padding:20px 0 56px}
+    .hero{position:relative;overflow:hidden;border-radius:36px;min-height:520px;background:linear-gradient(135deg,var(--navy),var(--navy2) 78%);color:#fff;box-shadow:var(--shadow);display:grid;grid-template-columns:1.08fr .92fr;gap:24px;padding:30px 30px 0}
+    .hero:before{content:"";position:absolute;right:-120px;top:-160px;width:390px;height:390px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),transparent 64%)}
+    .hero:after{content:"";position:absolute;left:-140px;bottom:-150px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,255,255,.08)}
+    .heroCopy{z-index:1;padding:8px 0 34px;display:grid;align-content:end}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;width:max-content;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:900}
+    .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+    h1{margin:18px 0 0;font-family:Georgia,'Times New Roman',serif;font-size:clamp(42px,6vw,78px);line-height:.95;letter-spacing:-.04em;max-width:11ch}
+    .heroLead{max-width:56ch;margin:18px 0 0;color:rgba(255,255,255,.78);font-size:16px;line-height:1.7}
+    .heroMeta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:800}
+    .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 18px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:900;border:1px solid transparent;transition:.2s}
+    .btn.primary{background:var(--gold);color:#2d2010}
+    .btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.16)}
+    .btn:hover{transform:translateY(-1px)}
+    .heroVisual{z-index:1;display:grid;align-content:end;justify-items:end}
+    .portrait{width:min(100%,430px);height:auto;filter:drop-shadow(0 28px 32px rgba(0,0,0,.24));transform:translateY(12px)}
+    .statsBand{margin-top:16px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;box-shadow:0 10px 24px rgba(17,33,41,.05)}
+    .stat b{display:block;color:var(--navy);font-size:24px;line-height:1}
+    .stat span{display:block;margin-top:8px;color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+    .section{margin-top:18px;border-top:1px solid rgba(231,219,202,.85);border-bottom:1px solid rgba(231,219,202,.85);overflow:hidden}
+    .section.bandLight{background:linear-gradient(180deg,rgba(255,255,255,.82),rgba(255,255,255,.94))}
+    .section.bandWarm{background:linear-gradient(180deg,#fbf7ef,#f7f1e6)}
+    .section.bandDark{background:linear-gradient(180deg,#eef4f6,#f8f4ec)}
+    .sectionInner{padding:34px 28px}
+    .sectionTitle{margin:0 0 10px;font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:clamp(28px,4vw,44px);line-height:1.02;letter-spacing:-.03em}
+    .sectionLead{margin:0;max-width:76ch;color:var(--muted);line-height:1.72}
+    .sectionKicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 12px;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--navy);font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+    .proofGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:16px;margin-top:18px}
+    .proofPanel,.featurePanel,.planCard,.testimonial,.compareCard,.guarantee{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 24px rgba(17,33,41,.04)}
+    .proofPanel{padding:22px}
+    .proofPanel h3{margin:0 0 14px;color:var(--navy);font-size:22px}
+    .valueList{display:grid;gap:12px}
+    .valueRow{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;padding:14px;border-radius:18px;background:#fbf7ef;border:1px solid #efe4d4}
+    .valueIcon{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:#fff;box-shadow:0 8px 16px rgba(10,49,64,.07);font-size:18px}
+    .valueRow b{display:block;color:var(--navy);font-size:15px}
+    .valueRow p{margin:5px 0 0;color:var(--muted);line-height:1.55;font-size:13.5px}
+    .testimonials{display:grid;gap:14px}
+    .testimonial{padding:18px}
+    .testimonial .quote{margin:0;color:#27363c;line-height:1.75;font-size:14px}
+    .testimonial .person{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+    .person strong{color:var(--navy)}
+    .person span{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+    .featureGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .featurePanel{padding:18px;min-height:170px}
+    .featurePanel .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:12px;background:var(--gold2);color:var(--navy);font-weight:900}
+    .featurePanel h4{margin:14px 0 8px;color:var(--navy);font-size:17px;line-height:1.2}
+    .featurePanel p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.65}
+    .compareWrap{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+    .compareCard{padding:18px}
+    .compareCard h4{margin:0 0 10px;color:var(--navy)}
+    .bar{height:12px;border-radius:999px;background:#ece2d2;overflow:hidden;margin:10px 0 12px}
+    .fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),var(--navy))}
+    .compareCard ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+    .compareCard li{display:flex;gap:8px;align-items:flex-start;color:#33454d;font-size:13.5px;line-height:1.5}
+    .compareCard li:before{content:"✓";color:var(--green);font-weight:900;flex:0 0 auto}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .planCard{position:relative;padding:20px;overflow:hidden}
+    .planCard.recommended{border-color:rgba(195,154,87,.55);box-shadow:0 16px 32px rgba(195,154,87,.16)}
+    .tag{display:inline-flex;padding:8px 10px;border-radius:999px;background:var(--gold2);color:var(--navy);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .planPrice{margin:14px 0 10px;color:var(--navy);font-family:Georgia,serif;font-size:34px;letter-spacing:-.03em}
+    .planPrice small{font-size:14px;color:var(--muted);font-family:inherit}
+    .planCard ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+    .planCard li{display:flex;gap:8px;align-items:flex-start;color:#32434a;font-size:13.5px;line-height:1.5}
+    .planCard li:before{content:"•";color:var(--gold);font-weight:900}
+    .guarantees{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .guarantee{padding:18px}
+    .guarantee b{display:block;color:var(--navy);font-size:16px;margin-bottom:8px}
+    .guarantee p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.7}
+    .supportBand{margin-top:16px;display:grid;grid-template-columns:1.15fr .85fr;gap:14px}
+    .supportCard{background:linear-gradient(135deg,#0e3546,#071f2a);color:#fff;border-radius:24px;padding:22px}
+    .supportCard h3{margin:0 0 10px;font-size:24px}
+    .supportCard p{margin:0;color:rgba(255,255,255,.78);line-height:1.7}
+    .supportPills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .supportPills span{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px;font-weight:800}
+    .ctaFinal{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;background:linear-gradient(135deg,#fff7e6,#fffdf9);border:1px solid #eadfcb;border-radius:24px;margin-top:16px}
+    .ctaFinal h3{margin:0;color:var(--navy);font-size:26px;line-height:1.05}
+    .ctaFinal p{margin:8px 0 0;color:var(--muted);line-height:1.6}
+    .footer{padding:18px 0 0;color:#8a8f91;text-align:center;font-size:12px;letter-spacing:.2em;font-weight:900}
+    @media (max-width: 1100px){
+      .hero,.proofGrid,.supportBand{grid-template-columns:1fr}
+      .featureGrid,.compareWrap,.plans,.guarantees,.statsBand{grid-template-columns:repeat(2,1fr)}
+      .heroVisual{justify-items:center}
+      .portrait{width:min(82vw,430px)}
+    }
+    @media (max-width: 720px){
+      .page{width:min(94vw,1240px)}
+      .hero{padding:20px 18px 0;border-radius:26px;min-height:auto}
+      .sectionInner{padding:20px}
+      .featureGrid,.compareWrap,.plans,.guarantees,.statsBand{grid-template-columns:1fr}
+      .ctaFinal{flex-direction:column;align-items:flex-start}
+      h1{max-width:100%}
+    }
+    /* PDF brochure visual system */
+    :root{--navy:#003047;--navy2:#001f2d;--gold:#ff8a00;--gold2:#ffd95b;--paper:#02090d;--card:#fff;--text:#102832;--muted:#60727a;--line:#d8e2e6;--green:#45b5d0;--shadow:none;--radius:0}
+    body{background:#02090d;color:#fff;font-family:Arial,Helvetica,sans-serif}
+    .page{width:100%;padding:0}
+    .hero{width:100%;min-height:650px;border-radius:0;background:linear-gradient(100deg,#02090d 0 48%,#003047 48%);box-shadow:none;padding:52px max(28px,calc((100vw - 1160px)/2)) 0;border-bottom:8px solid var(--gold)}
+    .hero:before{content:"PB";right:5%;top:90px;width:auto;height:auto;background:none;color:rgba(255,255,255,.045);font:900 300px/1 Arial,sans-serif}
+    .hero:after{display:none}
+    .heroCopy{padding-bottom:78px}
+    .eyebrow{border-radius:0;border:0;border-left:42px solid var(--gold);padding:0 0 0 12px;background:none}
+    h1,.sectionTitle{font-family:"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:0}
+    h1{font-size:clamp(58px,8vw,108px);line-height:.82;max-width:8ch;text-shadow:5px 6px 0 rgba(117,220,229,.18)}
+    .heroLead{max-width:52ch}
+    .pill{border-radius:0;border-color:rgba(255,255,255,.12);background:rgba(0,0,0,.2);font-size:11px}
+    .btn{border-radius:0;text-transform:uppercase}
+    .btn.primary{background:var(--gold);color:#160f05}
+    .portrait{max-height:620px;object-fit:contain}
+    .statsBand{width:min(1160px,calc(100% - 40px));margin:20px auto;gap:1px;background:#164153}
+    .stat{border:0;border-radius:0;background:#fff;box-shadow:none;text-align:center}
+    .section{margin:0;border:0}
+    .section.bandLight{background:#f1f6f7;color:var(--text)}
+    .section.bandWarm{background:#fff;color:var(--text)}
+    .section.bandDark{background:#00283b;color:#fff}
+    .sectionInner{width:min(1160px,calc(100% - 40px));margin:auto;padding:76px 0}
+    .sectionTitle{font-size:clamp(36px,5vw,58px);font-weight:900}
+    .sectionKicker{border-radius:0;border:0;border-left:32px solid var(--gold);padding:0 0 0 10px;background:none;color:var(--gold)}
+    .sectionLead{max-width:65ch}
+    .bandDark .sectionTitle{color:#fff}.bandDark .sectionLead{color:rgba(255,255,255,.68)}
+    .proofPanel,.featurePanel,.planCard,.testimonial,.compareCard,.guarantee{border-radius:0;box-shadow:none}
+    .proofGrid{gap:1px;background:#d9e3e6}
+    .proofPanel{border:0}
+    .testimonial{border:1px solid #d9e3e6;box-shadow:6px 6px 0 rgba(69,181,208,.22)}
+    .valueRow{border-radius:0;border:0;border-left:5px solid var(--gold);background:#f1f6f7}
+    .valueIcon{border-radius:0;background:var(--navy);color:#fff;box-shadow:none}
+    .featurePanel{border-top:5px solid var(--gold)}
+    .featurePanel .num{border-radius:0;background:var(--navy);color:#fff}
+    .compareCard{border:1px solid #d9e3e6}
+    .bar{border-radius:0;background:#dce7ea}.fill{border-radius:0;background:linear-gradient(90deg,#45b5d0,#ff8a00)}
+    .plans{gap:14px}.planCard{border:3px solid #fff;min-height:400px;background:#fff}.planCard.recommended{background:linear-gradient(145deg,#ffd95b,#ff9850);border-color:#fff;box-shadow:none}.tag{border-radius:0;background:var(--navy);color:#fff}.planPrice{margin-top:22px}
+    .guarantees{gap:1px;background:rgba(255,255,255,.16)}.guarantee{border:0;background:#001f2d;color:#fff}.guarantee b{color:#fff}.guarantee p{color:rgba(255,255,255,.68)}
+    .supportCard{border-radius:0;background:#02090d}.supportPills span{border-radius:0}
+    .ctaFinal{border-radius:0;border:0;background:linear-gradient(90deg,#ffd95b,#ff9850)}
+    .footer{padding:28px;background:#000;color:rgba(255,255,255,.55)}
+    .journey{background:#fff;color:var(--navy);padding:34px 20px}
+    .journeyInner{width:min(1160px,100%);margin:auto;display:grid;grid-template-columns:190px 1fr;gap:26px;align-items:center}
+    .journeyClaim{font:900 28px/.95 "Arial Narrow",Arial,sans-serif;text-transform:uppercase}.journeyClaim span{color:var(--gold)}
+    .journeySteps{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+    .journeyStep{min-height:78px;display:grid;place-items:center;padding:14px 17px 14px 24px;background:var(--gold);color:#fff;clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%,13% 50%);font-size:11px;font-weight:900;text-align:center;text-transform:uppercase}
+    .journeyStep:first-child{clip-path:polygon(0 0,86% 0,100% 50%,86% 100%,0 100%)}.journeyStep:nth-child(even){background:var(--navy)}
+    .focusVisual{display:grid;grid-template-columns:.82fr 1.18fr;gap:60px;align-items:center;margin-top:28px}
+    .donut{position:relative;width:min(100%,390px);aspect-ratio:1;border-radius:50%;background:conic-gradient(#75dce5 0 20%,#45b5d0 20% 40%,#348fbd 40% 60%,#1e5e73 60% 90%,#8ee7ee 90%);margin:auto}
+    .donut:after{content:"JOB-READY\A FOCUS";white-space:pre;position:absolute;inset:27%;display:grid;place-items:center;border-radius:50%;background:#001f2d;color:#fff;font:900 24px/.9 "Arial Narrow",Arial,sans-serif;text-align:center}
+    .focusLegend{display:grid;gap:8px}.focusLegend div{display:grid;grid-template-columns:12px 1fr auto;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #d8e2e6}.focusLegend i{width:12px;height:12px;background:var(--c)}.focusLegend b{font-size:14px}.focusLegend span{color:var(--navy);font-size:22px;font-weight:900}
+    .chartGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+    .miniChart{padding:22px;background:#fff;border:1px solid #d8e2e6}.chartTitle{display:flex;justify-content:space-between;gap:12px;color:var(--navy);font-weight:900;text-transform:uppercase}.chartTitle strong{color:var(--gold);text-align:right}.chartTitle strong b{display:block;color:var(--navy);font-size:28px}.columns{height:190px;display:flex;align-items:end;gap:7px;margin-top:18px;border-bottom:2px solid #cbd8dd;background:repeating-linear-gradient(to top,transparent 0 37px,#e5ecef 38px)}.column{height:100%;flex:1;display:flex;flex-direction:column;justify-content:end;align-items:center;min-width:0}.column i{width:min(34px,80%);height:calc(var(--v)*1%);min-height:5px;background:#45b5d0}.column.pb i{background:linear-gradient(#ffd95b,#ff8a00)}.column span{min-height:34px;padding-top:6px;color:#53666e;font-size:8px;text-align:center;word-break:break-word}
+    .syllabusGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:26px;background:#cad8dc}.syllabusCol{padding:24px;background:#fff}.syllabusCol h3{margin:0 0 14px;color:var(--navy);font-size:22px;text-transform:uppercase}.syllabusCol ul{display:grid;gap:8px;margin:0;padding:0;list-style:none;color:#52646b;font-size:12px}.syllabusCol li:before{content:"";display:inline-block;width:7px;height:7px;margin-right:8px;background:var(--gold)}
+    .pipeline{display:grid;grid-template-columns:repeat(5,1fr);margin-top:28px}.pipe{padding:18px 10px;background:var(--navy);color:#fff;text-align:center;font-size:11px;font-weight:900;text-transform:uppercase}.pipe:nth-child(even){background:#0b4a61}
+    @media(max-width:900px){.journeyInner,.focusVisual{grid-template-columns:1fr}.journeyClaim{text-align:center}.chartGrid{grid-template-columns:1fr}.syllabusGrid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.hero{background:linear-gradient(180deg,#02090d 0 62%,#003047 62%);padding-inline:18px}.heroMeta{display:none}.heroCopy{padding-bottom:0}.heroVisual{min-height:285px}.portrait{width:min(78vw,300px);max-height:300px}.ctaRow{margin-top:20px}.journeySteps,.pipeline{grid-template-columns:1fr}.journeyStep,.journeyStep:first-child{min-height:52px;clip-path:polygon(0 0,95% 0,100% 50%,95% 100%,0 100%,5% 50%)}.syllabusGrid{grid-template-columns:1fr}.sectionInner{width:min(100% - 28px,1160px);padding:56px 0}.statsBand{width:calc(100% - 28px)}}
+    /* Conversion, testimonial, and responsive enhancements */
+    .heroMeta{display:none}
+    .heroLead strong,.highlight{color:#fff;background:linear-gradient(transparent 58%,rgba(255,138,0,.56) 58%);padding:0 2px}
+    .painSection{background:#fff;color:var(--text);padding:64px 0}
+    .painInner{width:min(1160px,calc(100% - 40px));margin:auto}
+    .painGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:26px;background:#d6e1e5}
+    .painCard{position:relative;min-height:210px;padding:24px;background:#f4f8f9;border-top:5px solid var(--gold)}
+    .painCard:before{content:attr(data-step);display:grid;place-items:center;width:34px;height:34px;margin-bottom:16px;background:var(--navy);color:#fff;font-weight:900}
+    .painCard h3{margin:0;color:var(--navy);font-size:18px;line-height:1.2}
+    .painCard p{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+    .painCard strong{color:var(--navy);background:#ffe2a8;padding:1px 3px}
+    .marqueeRows{display:grid;gap:18px;margin-top:26px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+    .marqueeViewport{overflow:hidden}
+    .marqueeTrack{display:flex;width:max-content;gap:16px;will-change:transform;animation:proofMarquee 62s linear infinite}
+    .marqueeTrack.reverse{animation-name:proofMarqueeReverse;animation-duration:78s}
+    .marqueeRows:hover .marqueeTrack{animation-play-state:paused}
+    .marqueeCard{flex:0 0 355px;min-height:210px}
+    .marqueeCard.testimonial{display:flex;flex-direction:column;justify-content:space-between;padding:20px;background:#fff;color:var(--text)}
+    .testimonialRating{margin-bottom:10px;color:#f5a623;font-size:15px;line-height:1;letter-spacing:0}
+    .marqueeCard .person{display:block}.marqueeCard .person span{display:block;margin-top:5px}
+    .videoCard{position:relative;flex:0 0 320px;aspect-ratio:16/10;overflow:hidden;background:#001f2d;color:#fff;text-decoration:none;border:2px solid #fff;box-shadow:5px 5px 0 rgba(69,181,208,.25)}
+    .videoCard img{width:100%;height:100%;object-fit:cover;transition:transform .25s;filter:saturate(.9) contrast(1.03)}
+    .videoCard:hover img{transform:scale(1.035)}
+    .videoCard:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,16,24,.9))}
+    .videoPlay{position:absolute;z-index:2;left:50%;top:46%;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--gold);color:#15100a;font-size:21px;font-weight:900;transform:translate(-50%,-50%);box-shadow:0 0 0 7px rgba(255,255,255,.22)}
+    .videoMeta{position:absolute;z-index:2;left:16px;right:16px;bottom:14px}.videoMeta b{display:block;font-size:13px}.videoMeta span{display:block;margin-top:4px;color:rgba(255,255,255,.72);font-size:10px;text-transform:uppercase;letter-spacing:.08em}
+    .offerPanel{grid-column:1/-1;margin-top:24px}.offerPanel .valueList{grid-template-columns:repeat(5,1fr)}.offerPanel .valueRow{grid-template-columns:34px 1fr;padding:14px}.offerPanel .valueIcon{width:32px;height:32px;font-size:14px}.offerPanel .valueRow p{font-size:12px}
+    @keyframes proofMarquee{to{transform:translateX(calc(-50% - 8px))}}
+    @keyframes proofMarqueeReverse{from{transform:translateX(calc(-50% - 8px))}to{transform:translateX(0)}}
+    .countUp{font-variant-numeric:tabular-nums}
+    @keyframes counterGlow{50%{transform:translateY(-4px);background:#ff8a00}100%{transform:none}}
+    .planCard{display:flex;flex-direction:column}
+    .planCard.unavailable{opacity:.52;filter:grayscale(1);background:#e8edef;border-color:#d2dade}
+    .planCard.unavailable:after{content:"NOT AVAILABLE";position:absolute;right:-42px;top:28px;width:170px;padding:7px;background:#263840;color:#fff;font-size:10px;font-weight:900;text-align:center;transform:rotate(35deg)}
+    .planCard.recommended{transform:translateY(-10px);box-shadow:0 18px 0 rgba(255,138,0,.16)}
+    .oldPrice{margin-top:22px;color:#6f777a;font-size:16px;font-weight:800;text-decoration:line-through;text-decoration-thickness:2px}
+    .planCard .planPrice{margin-top:5px}.planCard .btn{margin-top:auto;background:var(--navy);color:#fff}
+    .tag.popular{background:#001f2d;color:#fff}.tag.popular:before{content:"★";margin-right:7px;color:#ffd95b}
+    .guarantee b{font-size:20px}.guarantee ul{display:grid;gap:12px;margin:16px 0 0;padding:0;list-style:none}.guarantee li{display:flex;gap:9px;color:rgba(255,255,255,.72);font-size:13px;line-height:1.55}.guarantee li span{color:var(--gold);font-weight:900}.guarantee mark{background:#ffd95b;color:#102832;padding:2px 4px;font-weight:900}
+    @media(max-width:1100px){.painGrid{grid-template-columns:repeat(2,1fr)}.offerPanel .valueList{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){
+      .hero{min-height:auto}.heroCopy{padding-top:0}.heroLead{max-width:100%;font-size:14px}.heroVisual{min-height:235px}.portrait{width:min(72vw,255px);max-height:255px}.ctaRow{display:grid;grid-template-columns:1fr 1fr}.btn{padding:12px 10px}.painSection{padding:50px 0}.painInner{width:calc(100% - 28px)}.painGrid{grid-template-columns:1fr}.painCard{min-height:0}.marqueeRows{margin-inline:-14px;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}.marqueeCard{flex-basis:290px;min-height:230px}.videoCard{flex-basis:270px}.offerPanel .valueList{grid-template-columns:1fr}.planCard.recommended{transform:none}.plans{gap:18px}.guarantee{padding:24px}.supportBand{grid-template-columns:1fr}.ctaFinal{padding:20px}.chartTitle{font-size:12px}.focusLegend span{font-size:19px}
+    }
+    @media(max-width:420px){.ctaRow{grid-template-columns:1fr}.chartTitle{align-items:flex-start}.chartTitle strong b{font-size:24px}.columns{height:170px}.syllabusCol{padding:20px}}
+    /* Viewport-triggered data visualizations */
+    .focusVisual .donut{opacity:.15;transform:scale(.72) rotate(-32deg);transition:opacity .8s ease,transform 1.25s cubic-bezier(.2,.75,.25,1)}
+    .focusVisual .focusLegend>div{opacity:0;transform:translateX(24px);transition:opacity .5s ease,transform .5s ease}
+    .focusVisual.is-visible .donut{opacity:1;transform:scale(1) rotate(0)}
+    .focusVisual.is-visible .focusLegend>div{opacity:1;transform:none}
+    .focusVisual.is-visible .focusLegend>div:nth-child(2){transition-delay:.1s}.focusVisual.is-visible .focusLegend>div:nth-child(3){transition-delay:.2s}.focusVisual.is-visible .focusLegend>div:nth-child(4){transition-delay:.3s}.focusVisual.is-visible .focusLegend>div:nth-child(5){transition-delay:.4s}
+    .chartGrid .miniChart{opacity:.25;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+    .chartGrid .column i{height:0;transition:height 1.25s cubic-bezier(.2,.75,.25,1)}
+    .chartGrid.is-visible .miniChart{opacity:1;transform:none}.chartGrid.is-visible .column i{height:calc(var(--v)*1%)}
+    .chartGrid.is-visible .miniChart:nth-child(2){transition-delay:.08s}.chartGrid.is-visible .miniChart:nth-child(3){transition-delay:.16s}.chartGrid.is-visible .miniChart:nth-child(4){transition-delay:.24s}
+    .stat.counted{animation:counterGlow .7s ease both}
+    .videoProof{margin-top:42px;padding-top:30px;border-top:1px solid #d5e0e4}.bandDark .videoProof{border-top-color:rgba(255,255,255,.15)}
+    .videoProofHead{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}.videoProofHead h3{margin:0;color:var(--navy);font-size:26px}.bandDark .videoProofHead h3{color:#fff}.videoProofHead p{max-width:54ch;margin:0;color:var(--muted);font-size:13px;line-height:1.6}.bandDark .videoProofHead p{color:rgba(255,255,255,.65)}
+    .videoGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.videoGrid.three{grid-template-columns:repeat(3,1fr)}
+    .videoGrid .videoCard{width:100%;min-width:0;aspect-ratio:16/10;box-shadow:none}.videoGrid .videoPlay{width:48px;height:48px;font-size:18px}.videoGrid .videoMeta{left:12px;right:12px;bottom:11px}
+    .guarantee{display:grid;align-content:start;min-height:240px}.guaranteeTop{display:flex;align-items:center;justify-content:space-between;gap:12px}.guaranteeTop b{margin:0}.guaranteeMetric{color:var(--gold);font:900 30px/1 "Arial Narrow",Arial,sans-serif}.guarantee ul{gap:10px;margin-top:18px}.guarantee li{padding-top:10px;border-top:1px solid rgba(255,255,255,.1)}
+    @media(max-width:1100px){.videoGrid,.videoGrid.three{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:720px){.videoProof{margin-top:32px;padding-top:24px}.videoProofHead{display:block}.videoProofHead p{margin-top:8px}.videoGrid,.videoGrid.three{grid-template-columns:1fr}.videoGrid .videoCard{aspect-ratio:16/9}.guarantee{min-height:0}.guaranteeMetric{font-size:26px}}
+    /* Scroll-triggered campaign popups */
+    [hidden]{display:none!important}
+    body.popupOpen{overflow:hidden}
+    .popupOverlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:20px;background:rgba(1,11,16,.82);backdrop-filter:blur(7px);animation:popupFade .22s ease both}
+    .popupDialog{position:relative;width:min(760px,100%);max-height:88vh;overflow:auto;display:grid;grid-template-columns:.9fr 1.1fr;background:#fff;color:var(--text);border:3px solid #fff;box-shadow:12px 12px 0 rgba(255,138,0,.45);animation:popupRise .3s cubic-bezier(.2,.75,.25,1) both}
+    .popupClose{position:absolute;z-index:4;right:10px;top:10px;width:42px;height:42px;border:0;background:#001f2d;color:#fff;font-size:25px;line-height:1;cursor:pointer}.popupClose:hover{background:var(--gold);color:#15100a}.popupClose:focus-visible,.popupAction:focus-visible{outline:3px solid #45b5d0;outline-offset:3px}
+    .popupMedia{position:relative;min-height:310px;background:#001f2d;overflow:hidden}.popupMedia img{width:100%;height:100%;object-fit:cover}.popupMedia:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,20,30,.72))}.popupMedia .videoPlay{top:50%}
+    .popupBody{display:grid;align-content:center;padding:42px 38px}.popupKicker{color:var(--gold);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.popupTitle{margin:10px 0 0;color:var(--navy);font:900 clamp(34px,5vw,50px)/.92 "Arial Narrow",Arial,sans-serif;text-transform:uppercase}.popupCopy{margin:16px 0 0;color:var(--muted);font-size:14px;line-height:1.7}.popupActions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.popupAction{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 17px;background:var(--navy);color:#fff;text-decoration:none;font-size:12px;font-weight:900;text-transform:uppercase}.popupAction.primary{background:var(--gold);color:#15100a}.popupAction.disabled{pointer-events:none;opacity:.5}
+    .offerDialog{display:block;width:min(560px,100%);border-color:var(--gold);background:#fff}.offerDialog .popupBody{padding:46px 42px 38px}.offerBadge{display:inline-flex;padding:7px 10px;background:#001f2d;color:#fff;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}.offerPrice{display:flex;align-items:end;gap:13px;margin-top:22px}.offerPrice del{color:#7d8a8f;font-size:18px;font-weight:800}.offerPrice strong{color:var(--navy);font:900 46px/1 "Arial Narrow",Arial,sans-serif}.offerPrice small{font-size:15px}.offerTimer{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:20px;padding:15px 16px;background:#001f2d;color:#fff}.offerTimer span{font-size:11px;font-weight:800;text-transform:uppercase}.offerTimer b{color:var(--gold);font:900 29px/1 "Arial Narrow",Arial,sans-serif;font-variant-numeric:tabular-nums}.offerTerms{margin:12px 0 0;color:#738188;font-size:10px;line-height:1.55}
+    .whatsappCta{gap:8px}.whatsappCta img{width:19px;height:19px;object-fit:contain;flex:0 0 auto}
+    .problemVideoBand{display:grid;grid-template-columns:.8fr 1.2fr;margin-top:28px;background:#001f2d;color:#fff;border-bottom:6px solid var(--gold)}
+    .problemVideoCopy{display:grid;align-content:center;padding:30px}.problemVideoCopy span{color:var(--gold);font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.problemVideoCopy h3{margin:9px 0 0;font-size:28px;line-height:1.05}.problemVideoCopy p{margin:12px 0 0;color:rgba(255,255,255,.68);font-size:13px;line-height:1.65}
+    .problemVideoBand .videoCard{width:100%;min-width:0;aspect-ratio:16/9;border:0;box-shadow:none}
+    .offerPanel{border:0;background:transparent;padding:0}.offerPanel h3{margin-bottom:18px;text-align:center;font:900 32px/1 "Arial Narrow",Arial,sans-serif;text-transform:uppercase}
+    .offerPanel .valueList{display:grid;grid-template-columns:1fr;gap:0;max-width:920px;margin:auto;padding:0 32px 30px 0}
+    .offerPanel .valueRow{position:relative;width:calc(100% - var(--stack-offset));margin-top:-1px;padding:18px 20px;transform:translateX(var(--stack-offset));background:#fff;border:1px solid #d6e1e5;border-left:6px solid var(--gold);box-shadow:8px 9px 0 rgba(0,48,71,.09)}
+    .offerPanel .valueRow:nth-child(1){--stack-offset:0px;z-index:5}.offerPanel .valueRow:nth-child(2){--stack-offset:14px;z-index:4}.offerPanel .valueRow:nth-child(3){--stack-offset:28px;z-index:3}.offerPanel .valueRow:nth-child(4){--stack-offset:42px;z-index:2}.offerPanel .valueRow:nth-child(5){--stack-offset:56px;z-index:1}
+    .offerPanel .valueRow p{font-size:13px}.offerPanel .valueIcon{width:38px;height:38px;background:var(--navy);color:#fff}
+    .videoDialog{display:block;width:min(920px,100%);background:#001f2d;border-color:#fff}.videoDialog .popupClose{background:#fff;color:#001f2d}.videoDialogHead{padding:18px 70px 16px 20px;color:#fff}.videoDialogHead h2{margin:0;font-size:18px}.videoFrame{position:relative;width:100%;aspect-ratio:16/9;background:#000}.videoFrame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+    .popupMedia iframe{position:absolute;inset:0;z-index:2;width:100%;height:100%;border:0}.popupMedia.videoEmbed:after,.popupMedia.videoEmbed .videoPlay{display:none}
+    .goldOfferStatus{display:none;margin:13px 0 3px;padding:11px 12px;background:#001f2d;color:#fff;font-size:11px;font-weight:900;text-transform:uppercase}.goldOfferStatus b{float:right;color:var(--gold);font-size:18px;font-variant-numeric:tabular-nums}.planCard.offerActive .goldOfferStatus{display:block}.planCard.offerActive{outline:5px solid rgba(255,138,0,.24)}
+    @keyframes popupFade{from{opacity:0}to{opacity:1}}@keyframes popupRise{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+    @media(max-width:720px){.problemVideoBand{grid-template-columns:1fr}.problemVideoCopy{padding:24px}.offerPanel .valueList{padding:0}.offerPanel .valueRow{--stack-offset:0px!important;width:100%;transform:none;margin-top:10px;box-shadow:5px 6px 0 rgba(0,48,71,.09)}}
+    @media(max-width:650px){.popupOverlay{padding:12px}.popupDialog{grid-template-columns:1fr;max-height:92vh}.popupMedia{min-height:210px;max-height:240px}.popupBody,.offerDialog .popupBody{padding:30px 22px 24px}.popupTitle{font-size:36px}.popupActions{display:grid}.popupAction{width:100%}.offerPrice{align-items:flex-start;flex-direction:column;gap:5px}.offerPrice strong{font-size:42px}.videoDialogHead{padding:16px 58px 14px 14px}.videoFrame{aspect-ratio:9/16;max-height:76vh}}
+    /* Start Data Engineering visual theme */
+    :root{
+      --navy:#0f1730;
+      --navy2:#14234a;
+      --gold:#2563eb;
+      --gold2:#dce8ff;
+      --paper:#f7f8fc;
+      --card:#fff;
+      --text:#0f172a;
+      --muted:#667085;
+      --line:#d9e0ee;
+      --green:#10b981;
+      --shadow:0 24px 70px rgba(15,23,48,.14);
+      --radius:18px;
+    }
+    *{letter-spacing:0!important}
+    body{background:#f7f8fc;color:var(--text);font-family:"DM Sans",Arial,sans-serif}
+    .page{width:100%;padding:0;background:#f7f8fc}
+    .hero{width:100%;min-height:660px;border:0;border-radius:0;background:radial-gradient(760px 470px at 88% 8%,rgba(59,130,246,.28),transparent 65%),radial-gradient(620px 430px at 0 58%,rgba(37,99,235,.17),transparent 68%),linear-gradient(145deg,#0f1730,#14234a);box-shadow:none;padding:72px max(28px,calc((100vw - 1160px)/2)) 0;grid-template-columns:1.05fr .95fr;gap:54px}
+    .hero:before{content:"";inset:0 0 auto auto;width:46%;height:100%;background:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 96px);opacity:.6}
+    .hero:after{display:none}
+    .heroCopy{padding:24px 0 70px;align-content:center}
+    .eyebrow{padding:0 0 0 12px;border:0;border-left:28px solid #3b82f6;border-radius:0;background:none;color:#8fb2ff;font-size:12px}
+    .eyebrow:before{display:none}
+    h1,.sectionTitle{font-family:Manrope,"DM Sans",Arial,sans-serif;text-transform:none;text-shadow:none}
+    h1{max-width:11ch;margin-top:28px;font-size:clamp(52px,6vw,78px);font-weight:700;line-height:1.02;color:#fff}
+    h1 span{color:#8fb2ff}
+    .heroLead{max-width:59ch;color:#c4cce0;font-size:16px;line-height:1.75}
+    .heroLead strong,.highlight{color:#fff;background:linear-gradient(transparent 68%,rgba(59,130,246,.55) 68%);padding:0 2px}
+    .btn{min-height:50px;padding:0 22px;border-radius:12px;text-transform:none;font-size:14px;box-shadow:none}
+    .btn.primary{background:linear-gradient(120deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.25)}
+    .btn.secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.24)}
+    .btn:hover{transform:translateY(-2px)}
+    .portrait{width:min(100%,440px);max-height:610px;filter:drop-shadow(0 30px 42px rgba(2,8,23,.42))}
+    .statsBand{width:100%;margin:0;padding:0 max(28px,calc((100vw - 1160px)/2)) 58px;gap:12px;background:#0f1730}
+    .stat{padding:20px;border:1px solid rgba(142,180,255,.22);border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(37,99,235,.12));box-shadow:inset 0 1px 0 rgba(255,255,255,.08);text-align:left}
+    .stat b{color:#fff;font:800 28px/1 Manrope,sans-serif}.stat span{color:#9eabc7;font-size:11px}
+    .journey{padding:66px 20px;background:#fff;color:var(--text)}
+    .journeyInner{grid-template-columns:190px 1fr;gap:34px}
+    .journeyClaim{font:800 28px/1.05 Manrope,sans-serif;text-transform:none}.journeyClaim span{color:#2563eb}
+    .journeySteps{counter-reset:career-step;gap:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#fff}
+    .journeyStep,.journeyStep:first-child{counter-increment:career-step;position:relative;min-height:112px;padding:54px 16px 18px;clip-path:none;background:#fff;color:#26324a;border-left:1px solid var(--line);text-transform:none;font-size:12px}
+    .journeyStep:first-child{border-left:0}.journeyStep:nth-child(even){background:#f4f7ff;color:#26324a}
+    .journeyStep:before{content:"0" counter(career-step);position:absolute;top:17px;left:50%;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e5edff;color:#2563eb;font-weight:800;transform:translateX(-50%)}
+    .journeyStep:last-child:before{background:#2563eb;color:#fff;box-shadow:0 0 0 7px rgba(37,99,235,.12)}
+    .section{margin:0;border:0}.section.bandLight{background:#f7f8fc;color:var(--text)}.section.bandWarm{background:#fff;color:var(--text)}.section.bandDark{background:#0f1730;color:#fff}
+    .sectionInner{width:min(1160px,calc(100% - 40px));padding:96px 0}
+    .sectionTitle{max-width:18ch;margin-bottom:14px;color:#0f172a;font-size:clamp(38px,5vw,58px);font-weight:700;line-height:1.06}
+    .sectionLead{color:#667085;font-size:16px;line-height:1.75}
+    .sectionKicker{padding:0 0 0 12px;border:0;border-left:24px solid #2563eb;border-radius:0;background:none;color:#2563eb;font-size:11px}
+    .bandDark .sectionKicker{color:#8fb2ff;border-left-color:#3b82f6}.bandDark .sectionTitle{color:#fff}.bandDark .sectionLead{color:#aeb9d0}
+    .proofPanel,.featurePanel,.planCard,.testimonial,.compareCard,.guarantee{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.045)}
+    .proofGrid{gap:18px;background:transparent}.proofPanel{border:1px solid var(--line)}.proofPanel h3,.featurePanel h4,.valueRow b,.person strong,.compareCard h4{color:#17213d}
+    .testimonial{box-shadow:0 12px 35px rgba(15,23,48,.05)}.testimonial .quote{color:#35415a}.person span{color:#667085}
+    .valueRow{border:1px solid #e1e7f2;border-left:4px solid #3b82f6;border-radius:12px;background:#f8faff}.valueIcon{border-radius:10px;background:#e5edff;color:#2563eb;box-shadow:none}
+    .featureGrid{gap:16px}.featurePanel{border-top:1px solid var(--line);padding:24px}.featurePanel .num{border-radius:9px;background:#e5edff;color:#2563eb}.featurePanel h4{font-family:Manrope,sans-serif}
+    .painSection{padding:92px 0;background:#fff}.painGrid{gap:16px;background:transparent}.painCard{min-height:220px;padding:26px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.04)}
+    .painCard:before{width:36px;height:36px;border-radius:50%;background:#e5edff;color:#2563eb}.painCard h3{color:#17213d;font:700 18px/1.25 Manrope,sans-serif}.painCard strong{color:#1d4ed8;background:#eaf1ff}
+    .problemVideoBand{overflow:hidden;border:1px solid rgba(142,180,255,.22);border-radius:18px;background:linear-gradient(145deg,#0f1730,#14234a);box-shadow:0 22px 55px rgba(15,23,48,.18)}
+    .problemVideoCopy span{color:#8fb2ff}.problemVideoCopy h3{font-family:Manrope,sans-serif}.problemVideoCopy p{color:#b8c2d8}
+    .introVideoFrame{margin:18px;padding:12px;border:1px solid rgba(142,180,255,.32);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(37,99,235,.1));box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+    .introVideoHeader{display:flex;align-items:center;gap:11px;padding:2px 5px 12px}.introVideoAvatar{width:42px;height:42px;flex:0 0 auto;border:2px solid #fff;border-radius:50%;background:#fff;object-fit:cover;object-position:center 12%}.introVideoHeader b{display:block;color:#fff;font:700 16px/1.2 Manrope,sans-serif;text-transform:uppercase}.introVideoHeader span{display:block;margin-top:3px;color:#aeb9d0;font-size:12px}
+    .introVideoFrame .videoCard{display:block;position:relative;width:100%;aspect-ratio:16/9;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:#080d1d;box-shadow:0 18px 38px rgba(3,8,24,.32)}.introVideoFrame .videoMeta{display:none}
+    .introVideoFooter{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 5px 3px;color:#dbe5ff;font-size:12px}.introVideoFooter span:first-child{display:flex;align-items:center;gap:8px}.introVideoDot{width:10px;height:10px;flex:0 0 auto;border-radius:50%;background:#4f7df0;box-shadow:0 0 0 7px rgba(79,125,240,.16)}
+    .marqueeCard.testimonial{border-radius:18px}.videoCard{border:1px solid rgba(142,180,255,.32);border-radius:16px;background:#0f1730;box-shadow:0 12px 30px rgba(15,23,48,.15)}
+    .videoPlay{background:#2563eb;color:#fff;box-shadow:0 0 0 7px rgba(255,255,255,.2)}
+    .offerPanel h3{font:700 32px/1 Manrope,sans-serif;text-transform:none}.offerPanel .valueList{padding-right:28px}.offerPanel .valueRow{border:1px solid var(--line);border-left:5px solid #3b82f6;border-radius:12px;background:#fff;box-shadow:8px 9px 0 rgba(37,99,235,.08)}.offerPanel .valueIcon{border-radius:9px;background:#e5edff;color:#2563eb}
+    .focusVisual .donut{background:conic-gradient(#60a5fa 0 20%,#2563eb 20% 40%,#38bdf8 40% 60%,#14b8a6 60% 90%,#93c5fd 90%)}.donut:after{background:#0f1730;font-family:Manrope,sans-serif}
+    .focusLegend div{border-bottom-color:#d9e0ee}.focusLegend div:nth-child(1){--c:#60a5fa!important}.focusLegend div:nth-child(2){--c:#2563eb!important}.focusLegend div:nth-child(3){--c:#38bdf8!important}.focusLegend div:nth-child(4){--c:#14b8a6!important}.focusLegend div:nth-child(5){--c:#93c5fd!important}.focusLegend span{color:#17213d}
+    .chartGrid{gap:18px}.miniChart{border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(15,23,42,.04)}.chartTitle{color:#17213d;text-transform:none}.chartTitle strong{color:#2563eb}.chartTitle strong b{color:#17213d}.columns{border-bottom-color:#bfc9db;background:repeating-linear-gradient(to top,transparent 0 37px,#edf1f7 38px)}.column i{border-radius:6px 6px 0 0;background:#93c5fd}.column.pb i{background:linear-gradient(#60a5fa,#2563eb)}
+    .syllabusGrid{gap:16px;background:transparent}.syllabusCol{border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(15,23,42,.04)}.syllabusCol h3{color:#17213d;font-family:Manrope,sans-serif;text-transform:none}.syllabusCol li:before{border-radius:50%;background:#3b82f6}
+    .pipeline{gap:8px}.pipe{border-radius:10px;background:#0f1730;text-transform:none}.pipe:nth-child(even){background:#1d4ed8}
+    .compareWrap{gap:18px}.compareCard{padding:24px}.bar{height:10px;border-radius:999px;background:#e7ebf3}.fill{border-radius:999px;background:linear-gradient(90deg,#14b8a6,#2563eb)}
+    .plans{gap:18px}.planCard{min-height:410px;padding:28px;border:1px solid var(--line);border-radius:22px}.planCard.unavailable{background:#f0f2f6;border-color:#e1e5ed;filter:grayscale(.7);opacity:.62}.planCard.unavailable:after{background:#657085}
+    .planCard.recommended{border:0;background:linear-gradient(150deg,#0f1730,#14234a);box-shadow:0 26px 70px rgba(15,23,48,.22);transform:translateY(-10px)}
+    .tag{border-radius:8px;background:#e5edff;color:#1d4ed8}.tag.popular{background:#2563eb;color:#fff}.tag.popular:before{color:#bfdbfe}
+    .planPrice{font-family:Manrope,sans-serif;color:#17213d}.planCard.recommended .planPrice,.planCard.recommended .planPrice small{color:#fff}.planCard.recommended .oldPrice{color:#9ba8c4}.planCard.recommended li{color:#d3daea}.planCard.recommended li:before{color:#60a5fa}
+    .planCard .btn{border-radius:12px;background:linear-gradient(120deg,#2563eb,#3b82f6);color:#fff}.goldOfferStatus{border-radius:9px;background:rgba(37,99,235,.18);color:#dbeafe}.goldOfferStatus b{color:#93c5fd}.planCard.offerActive{outline:5px solid rgba(59,130,246,.22)}
+    .guarantees{gap:16px;background:transparent}.guarantee{min-height:240px;padding:26px;border:1px solid rgba(255,255,255,.13);border-radius:18px;background:linear-gradient(rgba(255,255,255,.075),rgba(255,255,255,.03));color:#fff}.guarantee b{color:#fff}.guaranteeMetric{color:#8fb2ff;font-family:Manrope,sans-serif}.guarantee li{color:#b8c2d8}.guarantee li span{color:#60a5fa}.guarantee mark{border-radius:4px;background:#dbeafe;color:#1e3a8a}
+    .supportCard{border:1px solid rgba(142,180,255,.2);border-radius:18px;background:linear-gradient(135deg,#172554,#1d4ed8)}.supportPills span{border-radius:999px;background:rgba(255,255,255,.1)}
+    .bandDark .proofPanel{border-color:rgba(255,255,255,.12);background:#fff}.bandDark .videoProof{border-top-color:rgba(255,255,255,.14)}
+    .ctaFinal{border:0;border-radius:18px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;box-shadow:0 20px 50px rgba(37,99,235,.24)}.ctaFinal h3{color:#fff;font-family:Manrope,sans-serif}.ctaFinal p{color:#dbeafe}.ctaFinal .btn.primary{background:#0f1730;box-shadow:none}
+    .footer{padding:32px;background:#080d1d;color:#9ca8c0}
+    .popupOverlay{background:rgba(8,13,29,.86)}.popupDialog{overflow:hidden;border:1px solid rgba(255,255,255,.3);border-radius:20px;box-shadow:0 30px 90px rgba(3,8,24,.42)}
+    .popupClose{border-radius:10px;background:#0f1730;color:#fff}.popupClose:hover{background:#2563eb;color:#fff}.popupClose:focus-visible,.popupAction:focus-visible{outline-color:#60a5fa}
+    .popupTitle{color:#17213d;font-family:Manrope,sans-serif;text-transform:none}.popupKicker{color:#2563eb}.popupAction{border-radius:10px;background:#0f1730;text-transform:none}.popupAction.primary{background:linear-gradient(120deg,#2563eb,#3b82f6);color:#fff}
+    .offerDialog{border-color:#93b4ff}.offerBadge{border-radius:7px;background:#e5edff;color:#1d4ed8}.offerPrice strong{color:#17213d;font-family:Manrope,sans-serif}.offerTimer{border-radius:10px;background:#0f1730}.offerTimer b{color:#8fb2ff;font-family:Manrope,sans-serif}
+    .videoDialog{border-color:#596683;border-radius:18px;background:#0f1730}.videoDialog .popupClose{background:#fff;color:#0f1730}
+    .heroJourney{margin-top:28px;padding:16px 14px 18px;border:1px solid rgba(142,180,255,.3);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(37,99,235,.12));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 14px 35px rgba(3,8,24,.2)}
+    .heroJourneyLabel{margin:0 0 14px 4px;color:#8fb2ff;font-size:11px;font-weight:800;text-transform:uppercase}
+    .heroJourneyTrack{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .heroJourneyTrack:before{content:"";position:absolute;z-index:0;top:25px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,#506da9,#80a7ff,#506da9)}
+    .heroJourneyStep{position:relative;z-index:1;display:grid;justify-items:center;text-align:center;min-width:0}
+    .heroJourneyStep .node{display:grid;place-items:center;width:50px;height:50px;border:2px solid #6075a4;border-radius:50%;background:#17213f;color:#cbd8ff;font:800 15px/1 Manrope,sans-serif;box-shadow:0 0 0 7px rgba(10,18,43,.72)}
+    .heroJourneyStep strong{margin-top:14px;color:#fff;font-size:12px;line-height:1.2}.heroJourneyStep small{margin-top:5px;color:#98a6c3;font-size:10px;line-height:1.3}
+    .heroJourneyStep:last-child .node{border-color:#93b4ff;background:#4f7df0;color:#fff;box-shadow:0 0 0 7px rgba(79,125,240,.2),0 0 28px rgba(96,165,250,.38)}
+    .studentWinsTitle{display:flex;align-items:center;gap:8px}.studentWinsTitle svg{width:20px;height:20px;fill:none;stroke:#2563eb;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.studentWinsTitle svg:last-child{transform:scaleX(-1)}
+    .syllabusGrid{grid-template-columns:repeat(2,1fr);align-items:start;gap:14px}.syllabusCol{padding:0;overflow:hidden}.syllabusCol summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;cursor:pointer;list-style:none}.syllabusCol summary::-webkit-details-marker{display:none}.syllabusCol summary h3{margin:0}.syllabusCol summary:after{content:"+";display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#e5edff;color:#2563eb;font-size:23px;font-weight:500;transition:transform .2s ease}.syllabusCol[open] summary{border-bottom:1px solid var(--line)}.syllabusCol[open] summary:after{transform:rotate(45deg)}.syllabusCol ul{padding:20px 24px 24px!important}.syllabusCol[open]{box-shadow:0 14px 36px rgba(15,23,42,.07)}
+    .planCard.recommended ul{gap:16px;margin:20px 0 0}.planCard.recommended li{line-height:1.65}.goldOfferStatus{margin:28px 0 14px;padding:15px 16px;align-items:center;justify-content:space-between}.goldOfferStatus b{float:none}.planCard.offerActive .goldOfferStatus{display:flex}
+    .guarantee li strong{color:#fff;font-weight:800}
+    .offerPanelHeader{max-width:720px;margin:0 auto 18px;text-align:center}.offerPanelHeader h3{margin:0 0 8px}.offerPanelHeader p{margin:0;color:#667085;font-size:14px;line-height:1.6}
+    .roadmapPanel .valueList{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;max-width:none;padding:0!important}
+    .roadmapPanel .valueList:before{content:"";position:absolute;top:25px;left:9%;right:9%;height:3px;border-radius:3px;background:linear-gradient(90deg,#93b4ff,#2563eb,#60a5fa);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.75,.25,1)}
+    .roadmapPanel.is-visible .valueList:before{transform:scaleX(1)}
+    .roadmapPanel .valueRow{position:relative;display:block;width:auto;margin:0;padding:68px 14px 18px;transform:translateY(18px);border:1px solid #dfe6f2;border-left:1px solid #dfe6f2;border-radius:14px;background:#fff;text-align:center;box-shadow:0 10px 24px rgba(15,23,42,.055);opacity:0;transition:opacity .45s ease,transform .55s cubic-bezier(.2,.75,.25,1),box-shadow .2s ease}
+    .roadmapPanel .valueRow:hover{box-shadow:0 16px 32px rgba(37,99,235,.12)}
+    .roadmapPanel.is-visible .valueRow{opacity:1;transform:none}.roadmapPanel.is-visible .valueRow:nth-child(2){transition-delay:.1s}.roadmapPanel.is-visible .valueRow:nth-child(3){transition-delay:.2s}.roadmapPanel.is-visible .valueRow:nth-child(4){transition-delay:.3s}.roadmapPanel.is-visible .valueRow:nth-child(5){transition-delay:.4s}
+    .roadmapPanel .valueIcon{position:absolute;z-index:2;top:0;left:50%;width:50px;height:50px;transform:translateX(-50%);border:5px solid #f7f8fc;border-radius:50%;background:#2563eb;color:#fff;box-shadow:0 0 0 2px #93b4ff;font-size:14px}
+    .roadmapPanel .valueRow:not(:last-child):after{content:"›";position:absolute;z-index:3;top:7px;right:-15px;color:#1d4ed8;font-size:28px;font-weight:700;line-height:1}
+    .roadmapPanel .valueRow b{font-size:14px}.roadmapPanel .valueRow p{margin-top:7px;font-size:12px;line-height:1.55}
+    .sectionChatCta{display:flex;justify-content:center;margin-top:26px}.sectionChatCta .btn{min-width:230px;border-radius:12px;background:linear-gradient(120deg,#2563eb,#3b82f6);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.2)}
+    @media(min-width:901px){.hero{min-height:760px}}
+    @keyframes counterGlow{50%{transform:translateY(-4px);background:#2563eb}100%{transform:none}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;gap:0;padding-top:58px}.heroCopy{padding-bottom:20px}.heroVisual{justify-items:center}.journeyInner{grid-template-columns:1fr}.journeyClaim{text-align:left}}
+    @media(max-width:720px){.hero{padding:48px 18px 0;background:radial-gradient(520px 330px at 95% 5%,rgba(59,130,246,.25),transparent 68%),linear-gradient(145deg,#0f1730,#14234a)}h1{font-size:clamp(46px,14vw,64px)}.heroJourney{padding:16px 12px 18px}.heroJourneyTrack{grid-template-columns:repeat(2,1fr);gap:24px 10px}.heroJourneyTrack:before{display:none}.statsBand{padding:18px 14px 44px;gap:10px}.journey{padding:52px 14px}.journeySteps{grid-template-columns:1fr}.journeyStep,.journeyStep:first-child{min-height:66px;padding:22px 16px 18px 62px;border-top:1px solid var(--line);border-left:0;text-align:left;justify-content:start;clip-path:none}.journeyStep:first-child{border-top:0}.journeyStep:before{top:50%;left:18px;transform:translateY(-50%)}.sectionInner{width:min(100% - 28px,1160px);padding:68px 0}.painSection{padding:68px 0}.problemVideoBand{border-radius:14px}.introVideoFrame{margin:12px;padding:10px;border-radius:15px}.introVideoHeader b{font-size:14px}.introVideoFooter{gap:8px;font-size:10px}.plans{gap:18px}.planCard{padding:24px}.planCard.recommended{transform:none}.offerPanel .valueRow{border-radius:12px}.roadmapPanel .valueList{grid-template-columns:1fr;gap:12px;padding-left:54px!important}.roadmapPanel .valueList:before{top:18px;bottom:18px;left:23px;right:auto;width:3px;height:auto;transform:scaleY(0);transform-origin:top}.roadmapPanel.is-visible .valueList:before{transform:scaleY(1)}.roadmapPanel .valueRow{min-height:104px;padding:17px 16px;text-align:left}.roadmapPanel .valueIcon{top:50%;left:-51px;width:44px;height:44px;transform:translateY(-50%);border-width:4px}.roadmapPanel .valueRow:not(:last-child):after{display:none}.syllabusGrid{grid-template-columns:1fr}.syllabusCol summary{padding:20px}.syllabusCol ul{padding:18px 20px 22px!important}.ctaFinal{border-radius:14px}.sectionChatCta .btn{width:100%}}
+    @media(max-width:420px){.ctaRow{grid-template-columns:1fr}.btn{width:100%}.statsBand{grid-template-columns:1fr 1fr}.stat{padding:16px}.stat b{font-size:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack{animation:none}.btn{transition:none}.focusVisual .donut,.focusVisual .focusLegend>div,.chartGrid .miniChart,.roadmapPanel .valueRow{opacity:1;transform:none;transition:none}.chartGrid .column i{height:calc(var(--v)*1%);transition:none}.roadmapPanel .valueList:before{transform:none;transition:none}.popupOverlay,.popupDialog{animation:none}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="heroCopy">
+        <div class="eyebrow">PB Data Engineering</div>
+        <h1>Become a <span>Data Engineer.</span></h1>
+        <p class="heroLead"><strong>Confused about which technology to learn?</strong> Whether you want to <span class="highlight">enter IT</span>, switch from a stagnant role, or earn the salary your effort deserves, this focused 3-month journey gives you a clear Data Engineering path with coaching, projects, interview support, and placement guidance.</p>
+        <div class="heroJourney" aria-label="A complete career journey">
+          <div class="heroJourneyLabel">A complete career journey</div>
+          <div class="heroJourneyTrack">
+            <div class="heroJourneyStep"><span class="node">01</span><strong>Find direction</strong><small>Choose a clear path</small></div>
+            <div class="heroJourneyStep"><span class="node">02</span><strong>Build skills</strong><small>SQL · Python · GCP</small></div>
+            <div class="heroJourneyStep"><span class="node">03</span><strong>Win interviews</strong><small>Proof + preparation</small></div>
+            <div class="heroJourneyStep"><span class="node">04</span><strong>Get hired</strong><small>Become career-ready</small></div>
+          </div>
+        </div>
+        <div class="ctaRow">
+          <a class="btn primary whatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Chat on WhatsApp</a>
+          <a class="btn secondary" href="#syllabus">See syllabus</a>
+        </div>
+      </div>
+      <div class="heroVisual">
+        <img class="portrait" src="../assets/prasad-photo.png" alt="Prasad Boyane" />
+      </div>
+    </section>
+
+    <section class="statsBand">
+      <div class="stat"><b class="countUp" data-count="3" data-suffix=" Months">0</b><span>Program timeline</span></div>
+      <div class="stat"><b class="countUp" data-count="90" data-suffix=" Days">0</b><span>Core coaching window</span></div>
+      <div class="stat"><b class="countUp" data-count="120" data-suffix=" Days">0</b><span>Result support window</span></div>
+      <div class="stat"><b class="countUp" data-count="100" data-suffix="%">0</b><span>Money-back guarantee</span></div>
+    </section>
+
+    <section class="painSection">
+      <div class="painInner">
+        <div class="sectionKicker">Built around real career problems</div>
+        <h2 class="sectionTitle">You need a clear next move, not another random course.</h2>
+        <div class="painGrid">
+          <article class="painCard" data-step="01"><h3>Trying to enter IT?</h3><p>Start with a guided path from fundamentals to cloud projects, even if you are coming from a <strong>non-coding background</strong>.</p></article>
+          <article class="painCard" data-step="02"><h3>Stuck in the same job?</h3><p>Build practical Data Engineering proof and interview confidence to make your <strong>job switch</strong> more achievable.</p></article>
+          <article class="painCard" data-step="03"><h3>Unsure what to study?</h3><p>Stop jumping between tools. Follow one focused stack: <strong>Python, SQL, Warehousing and GCP</strong>.</p></article>
+          <article class="painCard" data-step="04"><h3>Not earning enough?</h3><p>Prepare for stronger roles with projects, profile reviews, mock interviews, job calls, and <strong>salary-focused positioning</strong>.</p></article>
+        </div>
+        <div class="problemVideoBand">
+          <div class="problemVideoCopy"><span>Start with clarity</span><h3>Understand the Data Engineering path first.</h3><p>Watch this short introduction to see what Data Engineering involves, where the skills fit, and how the learning journey connects to real roles.</p></div>
+          <div class="introVideoFrame">
+            <div class="introVideoHeader"><img class="introVideoAvatar" src="../assets/prasad-photo.png" alt=""><div><b>Data Engineering Intro</b><span>Prasad Boyane</span></div></div>
+            <a class="videoCard" href="https://youtu.be/ph2SAi_00GA" aria-label="Play Data Engineering introduction"><img src="https://i.ytimg.com/vi/ph2SAi_00GA/hqdefault.jpg" alt="Data Engineering introduction video" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>Data Engineering introduction</b><span>Play inside this page</span></span></a>
+            <div class="introVideoFooter"><span><i class="introVideoDot"></i>Watch the program overview</span><span>Self-paced</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bandLight" id="proof">
+      <div class="sectionInner">
+        <div class="sectionKicker">Proof first</div>
+        <h2 class="sectionTitle">Proof from placed students.</h2>
+        <p class="sectionLead">Students value the clear explanations, practical examples, structured curriculum, and support that continues beyond class hours.</p>
+        <div class="marqueeRows" aria-label="Placed student testimonials">
+          <div class="marqueeViewport">
+            <div class="marqueeTrack" data-marquee-track>
+              <article class="testimonial marqueeCard"><div><div class="testimonialRating" aria-label="5 out of 5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div><p class="quote">"Complex topics became easier through clear explanations and practical examples. The material felt useful, engaging, and job-focused."</p></div><div class="person"><strong>Arshad S.</strong><span>Fractal - 16 LPA</span></div></article>
+              <article class="testimonial marqueeCard"><div><div class="testimonialRating" aria-label="4 out of 5 stars">&#11088;&#11088;&#11088;&#11088;</div><p class="quote">"The syllabus is well structured. Making videos and practising regularly boosted my confidence in daily professional interactions."</p></div><div class="person"><strong>Suraj M.</strong><span>TCS - 9.5 LPA</span></div></article>
+            </div>
+          </div>
+          <div class="marqueeViewport">
+            <div class="marqueeTrack reverse" data-marquee-track>
+              <article class="testimonial marqueeCard"><div><div class="testimonialRating" aria-label="5 out of 5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div><p class="quote">"Teaching every topic with simplicity is the most remarkable part. The consistency in teaching made the learning dependable."</p></div><div class="person"><strong>Mubeena G.</strong><span>LTI Mindtree - 10 LPA</span></div></article>
+              <article class="testimonial marqueeCard"><div><div class="testimonialRating" aria-label="5 out of 5 stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div><p class="quote">"Every small or big doubt received a reply, even after class hours. The assignments gave me confidence for practical work."</p></div><div class="person"><strong>Ashraf S.</strong><span>Capgemini - 12 LPA</span></div></article>
+            </div>
+          </div>
+        </div>
+        <div class="proofGrid">
+          <div class="proofPanel offerPanel roadmapPanel">
+            <div class="offerPanelHeader"><h3>What you get</h3><p>More than a technical class: one support system for skills, interviews, profile building, and placement preparation.</p></div>
+            <div class="valueList">
+              <div class="valueRow">
+                <div class="valueIcon">1</div>
+                <div><b>Job-ready coaching</b><p>Python, SQL, GCP, warehousing, and projects taught around real hiring outcomes.</p></div>
+              </div>
+              <div class="valueRow">
+                <div class="valueIcon">2</div>
+                <div><b>Focused learning support</b><p>Limited batches, doubt solving, and a lifetime HD video library.</p></div>
+              </div>
+              <div class="valueRow">
+                <div class="valueIcon">3</div>
+                <div><b>Interview preparation</b><p>Mock rounds, interview kits, ready-made scripts, and HR handling practice.</p></div>
+              </div>
+              <div class="valueRow">
+                <div class="valueIcon">4</div>
+                <div><b>Profile and placement support</b><p>Resume templates, LinkedIn and Naukri setup, reviews, referrals, and job-call support.</p></div>
+              </div>
+              <div class="valueRow">
+                <div class="valueIcon">5</div>
+                <div><b>Support beyond class</b><p>Lifetime community access, workshops, bonuses, and continued guidance.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bandLight">
+      <div class="sectionInner">
+        <div class="sectionKicker">Curriculum focus</div>
+        <h2 class="sectionTitle">How the program is focused.</h2>
+        <p class="sectionLead">Technical depth and career execution are taught together, so learning does not stop at completing the syllabus.</p>
+        <div class="focusVisual">
+          <div class="donut" role="img" aria-label="30 percent projects, 20 percent Python SQL and GCP, 20 percent Data Engineering, 20 percent interview preparation, 10 percent job hunting"></div>
+          <div class="focusLegend">
+            <div style="--c:#1e5e73"><i></i><b>Projects</b><span>30%</span></div>
+            <div style="--c:#75dce5"><i></i><b>Python + SQL + Google Cloud</b><span>20%</span></div>
+            <div style="--c:#45b5d0"><i></i><b>Data Engineering</b><span>20%</span></div>
+            <div style="--c:#348fbd"><i></i><b>Interview preparation</b><span>20%</span></div>
+            <div style="--c:#8ee7ee"><i></i><b>Job hunting</b><span>10%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bandWarm">
+      <div class="sectionInner">
+        <div class="sectionKicker">Differentiator</div>
+        <h2 class="sectionTitle">Four reasons PB-DE stands apart.</h2>
+        <p class="sectionLead">A focused three-month format, lower entry cost, a deliberately small batch, and competitive placement outcomes.</p>
+        <div class="chartGrid">
+          <article class="miniChart"><div class="chartTitle"><span>Class fees in lacs</span><strong><b>85%</b>Lower fees</strong></div><div class="columns"><div class="column" style="--v:92"><i></i><span>Scalar</span></div><div class="column" style="--v:43"><i></i><span>Intellipaat</span></div><div class="column" style="--v:34"><i></i><span>BossCoder</span></div><div class="column" style="--v:37"><i></i><span>JVM</span></div><div class="column" style="--v:21"><i></i><span>7Mentors</span></div><div class="column pb" style="--v:14"><i></i><span>PB-DE</span></div></div></article>
+          <article class="miniChart"><div class="chartTitle"><span>Class duration</span><strong><b>75%</b>Less time</strong></div><div class="columns"><div class="column" style="--v:92"><i></i><span>Scalar</span></div><div class="column" style="--v:69"><i></i><span>Intellipaat</span></div><div class="column" style="--v:62"><i></i><span>BossCoder</span></div><div class="column" style="--v:46"><i></i><span>JVM</span></div><div class="column" style="--v:46"><i></i><span>7Mentors</span></div><div class="column pb" style="--v:23"><i></i><span>PB-DE</span></div></div></article>
+          <article class="miniChart"><div class="chartTitle"><span>Average students per batch</span><strong><b>92%</b>Limited batch</strong></div><div class="columns"><div class="column" style="--v:92"><i></i><span>Scalar</span></div><div class="column" style="--v:62"><i></i><span>Intellipaat</span></div><div class="column" style="--v:46"><i></i><span>BossCoder</span></div><div class="column" style="--v:54"><i></i><span>JVM</span></div><div class="column" style="--v:54"><i></i><span>7Mentors</span></div><div class="column pb" style="--v:8"><i></i><span>PB-DE</span></div></div></article>
+          <article class="miniChart"><div class="chartTitle"><span>Average package in lacs</span><strong><b>60%</b>Avg. package</strong></div><div class="columns"><div class="column" style="--v:92"><i></i><span>Scalar</span></div><div class="column" style="--v:52"><i></i><span>Intellipaat</span></div><div class="column" style="--v:74"><i></i><span>BossCoder</span></div><div class="column" style="--v:43"><i></i><span>JVM</span></div><div class="column" style="--v:37"><i></i><span>7Mentors</span></div><div class="column pb" style="--v:52"><i></i><span>PB-DE</span></div></div></article>
+        </div>
+        <div class="sectionChatCta"><a class="btn whatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Chat on WhatsApp</a></div>
+        <div class="videoProof">
+          <div class="videoProofHead"><h3>Career-change video proof</h3><p>Watch learners explain how focused preparation helped them move from uncertainty to practical skills, confidence, and stronger outcomes.</p></div>
+          <div class="videoGrid">
+            <a class="videoCard" href="https://drive.google.com/file/d/1qCi3zoXwY_gDCWQOIWOdkoXlBemx5Hsq/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1qCi3zoXwY_gDCWQOIWOdkoXlBemx5Hsq&amp;sz=w640" alt="Student testimonial: from no coding background to Data Engineer" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>No coding background to Data Engineer</b><span>Student video</span></span></a>
+            <a class="videoCard" href="https://drive.google.com/file/d/1j84FZ1-lfpYa8c3g72AXYMQXCR_sjVMc/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1j84FZ1-lfpYa8c3g72AXYMQXCR_sjVMc&amp;sz=w640" alt="Student testimonial: more than 100 percent salary hike" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>More than 100% salary hike</b><span>Student video</span></span></a>
+            <a class="videoCard" href="https://drive.google.com/file/d/17QY2mGqLtxi6UT3yDfZPC1NdLdO9BZmA/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=17QY2mGqLtxi6UT3yDfZPC1NdLdO9BZmA&amp;sz=w640" alt="Student testimonial about gaining confidence" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>Building interview confidence</b><span>Student video</span></span></a>
+            <a class="videoCard" href="https://drive.google.com/file/d/1v1nvIEAktZsQVcvfN1TlU3vC6DMZJdZf/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1v1nvIEAktZsQVcvfN1TlU3vC6DMZJdZf&amp;sz=w640" alt="International client Data Engineering testimonial" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>International client results</b><span>Student video</span></span></a>
+          </div>
+        </div>
+        <div class="sectionChatCta"><a class="btn whatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Chat on WhatsApp</a></div>
+      </div>
+    </section>
+
+    <section class="section bandLight" id="syllabus">
+      <div class="sectionInner">
+        <div class="sectionKicker">End-to-end syllabus</div>
+        <h2 class="sectionTitle">Build the complete data pipeline.</h2>
+        <p class="sectionLead">Move from programming fundamentals to data modelling, cloud services, use cases, and production-style projects.</p>
+        <div class="syllabusGrid">
+          <details class="syllabusCol" open><summary><h3>Python</h3></summary><ul><li>Fundamentals and data types</li><li>Control flow and functions</li><li>File and exception handling</li><li>Object-oriented programming</li><li>Pandas data processing</li><li>APIs and JSON</li><li>Extract, transform, load</li><li>Reusable pipeline scripts</li></ul></details>
+          <details class="syllabusCol"><summary><h3>SQL</h3></summary><ul><li>Fundamentals and CRUD</li><li>Functions and joins</li><li>Subqueries and CTEs</li><li>Window functions</li><li>Dynamic SQL and PL-SQL</li><li>Stored procedures</li><li>Query optimization</li><li>Performance tuning</li></ul></details>
+          <details class="syllabusCol"><summary><h3>Data Warehousing</h3></summary><ul><li>Normalization</li><li>Fact and dimension tables</li><li>Star and snowflake schemas</li><li>Slowly changing dimensions</li><li>ETL and data quality</li><li>Scheduling and orchestration</li><li>Data modelling</li><li>Production pipeline patterns</li></ul></details>
+          <details class="syllabusCol"><summary><h3>Google Cloud</h3></summary><ul><li>Cloud services theory</li><li>IAM and service setup</li><li>Cloud Storage</li><li>BigQuery</li><li>Pub/Sub and Dataflow</li><li>Cloud Composer</li><li>Use cases and programs</li><li>End-to-end project modules</li></ul></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bandLight" id="plans">
+      <div class="sectionInner">
+        <div class="sectionKicker">Choose your support level</div>
+        <h2 class="sectionTitle">Program plans.</h2>
+        <p class="sectionLead"><strong>Gold is the only plan currently accepting enrollments.</strong> It combines the complete learning program with placement support, reviews, interview kits, and job-call assistance.</p>
+        <div class="plans">
+          <article class="planCard unavailable" aria-disabled="true">
+            <span class="tag">Silver - Not available</span>
+            <div class="oldPrice">74,999/- INR</div>
+            <div class="planPrice">49,999/- <small>INR</small></div>
+            <ul>
+              <li>Coaching &amp; lifetime video library access</li>
+              <li>All session notes &amp; whiteboard PDFs</li>
+              <li>Daily mock interview round sessions</li>
+              <li>QnA &amp; doubt solving live weekend sessions</li>
+              <li>Community access</li>
+            </ul>
+          </article>
+          <article class="planCard recommended">
+            <span class="tag popular">Gold Plan - Most popular</span>
+            <div class="oldPrice" id="goldOldPrice">89,999/- INR</div>
+            <div class="planPrice" id="goldPlanPrice">55,999/- <small>INR</small></div>
+            <ul>
+              <li>All Silver Plan components included</li>
+              <li>Complete placement support &amp; reviews</li>
+              <li>Exclusive HR job calls given</li>
+              <li>Additional bonuses &amp; interview kits</li>
+              <li>3 interview setup support</li>
+            </ul>
+            <div class="goldOfferStatus" id="goldOfferStatus">20-minute offer active <b data-offer-timer>20:00</b></div>
+            <a class="btn whatsappCta" id="goldWhatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Chat on WhatsApp</a>
+          </article>
+          <article class="planCard unavailable" aria-disabled="true">
+            <span class="tag">Platinum - Not available</span>
+            <div class="oldPrice">2,49,000/- INR</div>
+            <div class="planPrice">1,99,000/- <small>INR</small></div>
+            <ul>
+              <li>All Gold Plan components included</li>
+              <li>Unlimited interview calls</li>
+              <li>Job guaranteed</li>
+              <li>Minimum 10 LPA salary positioning</li>
+              <li>Invite-only plan</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bandDark" id="guarantees">
+      <div class="sectionInner">
+        <div class="sectionKicker">Guarantees & support</div>
+        <h2 class="sectionTitle">Triple guarantees.</h2>
+        <div class="guarantees">
+          <div class="guarantee"><div class="guaranteeTop"><b>Program completion</b><span class="guaranteeMetric">90 Days</span></div><ul><li><span>✓</span><div>Complete the structured core program within <strong>90 days</strong>.</div></li><li><span>✓</span><div>Catch up on missed topics in a <strong>future batch free</strong>.</div></li></ul></div>
+          <div class="guarantee"><div class="guaranteeTop"><b>Placement support</b><span class="guaranteeMetric">999 Days</span></div><ul><li><span>✓</span><div>Receive focused placement support through the <strong>120-day window</strong>.</div></li><li><span>✓</span><div>Support continues beyond it when you follow the agreed process.</div></li></ul></div>
+          <div class="guarantee"><div class="guaranteeTop"><b>Money-back terms</b><span class="guaranteeMetric">100%</span></div><ul><li><span>✓</span><div>Complete <strong>every daily assignment</strong> and apply the feedback.</div></li><li><span>✓</span><div>If the agreed result is still not achieved, the guarantee applies subject to program terms.</div></li></ul></div>
+        </div>
+        <div class="videoProof">
+          <div class="videoProofHead"><h3>More student video stories</h3><p>Hear directly from learners about entering Data Engineering, building confidence, and applying the program in their careers.</p></div>
+          <div class="videoGrid three">
+            <a class="videoCard" href="https://drive.google.com/file/d/1At8NvwhEkusGwJ3GTNmsAR7lgHNxYqBb/view" target="_blank" rel="noopener"><img src="https://drive.google.com/thumbnail?id=1At8NvwhEkusGwJ3GTNmsAR7lgHNxYqBb&amp;sz=w640" alt="Testimonial from a student with no coding background" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>No coding background student</b><span>Student video</span></span></a>
+            <a class="videoCard" href="https://youtube.com/shorts/hrNrhsWfvzc" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/hrNrhsWfvzc/hqdefault.jpg" alt="Hamid S. Data Engineering testimonial" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>Hamid S. - Data Engineering</b><span>YouTube testimonial</span></span></a>
+            <a class="videoCard" href="https://youtube.com/shorts/hMRPJCgAX9Q" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/hMRPJCgAX9Q/hqdefault.jpg" alt="Radhika G. Data Engineering testimonial" loading="lazy"><span class="videoPlay">▶</span><span class="videoMeta"><b>Radhika G. - Data Engineering</b><span>YouTube testimonial</span></span></a>
+          </div>
+        </div>
+        <div class="supportBand">
+          <div class="supportCard">
+            <h3>End to end support. Not just a class.</h3>
+            <p>Your support includes coaching, videos, mock interviews, scripts, profile setup, community access, referrals, bonuses, and live doubt solving from learning through placement.</p>
+            <div class="supportPills">
+              <span>Mock interviews</span><span>Interview prep kit</span><span>Ready-made scripts</span><span>LinkedIn/Naukri setup</span><span>Referral help</span><span>Lifetime access</span>
+            </div>
+          </div>
+          <div class="proofPanel">
+            <h3 class="studentWinsTitle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6M18 9h1.5a1 1 0 0 0 0-5H18M10 15v2.2c0 .7-.4 1.3-1 1.7L7 20h10l-2-1.1c-.6-.4-1-1-1-1.7V15M6 22h12"/></svg><span>Student wins</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6M18 9h1.5a1 1 0 0 0 0-5H18M10 15v2.2c0 .7-.4 1.3-1 1.7L7 20h10l-2-1.1c-.6-.4-1-1-1-1.7V15M6 22h12"/></svg></h3>
+            <div class="valueList">
+              <div class="valueRow"><div class="valueIcon">8</div><div><b>Radhika G.</b><p>Placed at 8 LPA</p></div></div>
+              <div class="valueRow"><div class="valueIcon">9</div><div><b>Aishwarya P.</b><p>Placed at 9 LPA</p></div></div>
+              <div class="valueRow"><div class="valueIcon">10</div><div><b>Mayur G.</b><p>Placed at 10 LPA</p></div></div>
+              <div class="valueRow"><div class="valueIcon">12</div><div><b>Santhosh J.</b><p>Placed at 12 LPA</p></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="ctaFinal">
+          <div>
+            <h3>Ready to build your Data Engineering career?</h3>
+            <p>Choose the support level that fits your goal and contact Prasad for current batch dates, eligibility, and availability.</p>
+          </div>
+          <a class="btn primary whatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">PB DATA ENGINEERING</div>
+  </main>
+
+  <div class="popupOverlay" id="proofPopup" hidden>
+    <section class="popupDialog" role="dialog" aria-modal="true" aria-labelledby="proofPopupTitle">
+      <button class="popupClose" type="button" data-popup-close aria-label="Close testimonial popup">×</button>
+      <div class="popupMedia videoEmbed">
+        <iframe src="https://www.youtube.com/embed/hMRPJCgAX9Q?rel=0" title="Radhika G. Data Engineering testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="popupBody">
+        <span class="popupKicker">Do not take our word for it</span>
+        <h2 class="popupTitle" id="proofPopupTitle">Watch students tell their own story.</h2>
+        <p class="popupCopy">See learners describe their journey, confidence, interviews, job switches, and Data Engineering outcomes in their own words.</p>
+        <div class="popupActions"><a class="popupAction primary" href="https://www.youtube.com/channel/UCYO7x47a43qnuOcdR8rhL4g" target="_blank" rel="noopener">Watch video testimonials</a></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="popupOverlay" id="offerPopup" hidden>
+    <section class="popupDialog offerDialog" role="dialog" aria-modal="true" aria-labelledby="offerPopupTitle">
+      <button class="popupClose" type="button" data-popup-close aria-label="Close offer popup">×</button>
+      <div class="popupBody">
+        <span class="offerBadge">20-minute call booking offer</span>
+        <h2 class="popupTitle" id="offerPopupTitle">Gold Plan at 44,999</h2>
+        <p class="popupCopy">Contact Prasad and schedule your call before the timer ends to request the limited Gold Plan offer.</p>
+        <div class="offerPrice"><del>55,999 INR</del><strong>44,999 <small>INR</small></strong></div>
+        <div class="offerTimer" aria-live="polite"><span>Time remaining</span><b data-offer-timer>20:00</b></div>
+        <div class="popupActions">
+          <a class="popupAction primary whatsappCta" id="offerWhatsappCta" href="https://wa.me/918087434188?text=I%20was%20checking%20your%20data%20engineering%20coaching%20%26%20would%20like%20to%20know%20more%20about%20the%20process%20%26%20pricing." target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="">Claim offer on WhatsApp</a>
+        </div>
+        <p class="offerTerms">The offer is subject to eligibility, call availability, and confirmation by the program owner.</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="popupOverlay" id="videoPlayerPopup" hidden>
+    <section class="popupDialog videoDialog" role="dialog" aria-modal="true" aria-labelledby="videoPlayerTitle">
+      <button class="popupClose" type="button" data-popup-close aria-label="Close video player">×</button>
+      <div class="videoDialogHead"><h2 id="videoPlayerTitle">Student video</h2></div>
+      <div class="videoFrame"><iframe id="videoPlayerFrame" src="" title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-marquee-track]').forEach(function(track){
+      Array.from(track.children).forEach(function(item){
+        var clone=item.cloneNode(true);
+        clone.setAttribute('aria-hidden','true');
+        if(clone.matches('a')) clone.tabIndex=-1;
+        track.appendChild(clone);
+      });
+    });
+
+    var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var revealTargets=document.querySelectorAll('.focusVisual,.chartGrid,.roadmapPanel');
+    if(reduceMotion||!('IntersectionObserver' in window)){
+      revealTargets.forEach(function(target){target.classList.add('is-visible');});
+    }else{
+      var revealObserver=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(!entry.isIntersecting)return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      },{threshold:.22});
+      revealTargets.forEach(function(target){revealObserver.observe(target);});
+    }
+
+    document.querySelectorAll('.countUp').forEach(function(counter){
+      var target=Number(counter.dataset.count);
+      var suffix=counter.dataset.suffix||'';
+      if(reduceMotion){counter.textContent=target+suffix;return;}
+      var observer=new IntersectionObserver(function(entries){
+        if(!entries[0].isIntersecting)return;
+        observer.disconnect();
+        var start=performance.now();
+        function tick(now){
+          var progress=Math.min((now-start)/1400,1);
+          var eased=1-Math.pow(1-progress,3);
+          counter.textContent=Math.round(target*eased)+suffix;
+          if(progress<1){requestAnimationFrame(tick);}else{counter.parentElement.classList.add('counted');}
+        }
+        requestAnimationFrame(tick);
+      },{threshold:.15});
+      observer.observe(counter);
+    });
+
+    var activePopup=null;
+    var popupReturnFocus=null;
+    var offerTicker=null;
+    var pendingPopup=null;
+    var shownPopups={};
+
+    function popupSessionGet(key){
+      try{return sessionStorage.getItem(key);}catch(error){return null;}
+    }
+
+    function popupSessionSet(key,value){
+      try{sessionStorage.setItem(key,value);}catch(error){}
+    }
+
+    function closePopup(){
+      if(!activePopup)return;
+      if(activePopup.id==='videoPlayerPopup')document.getElementById('videoPlayerFrame').src='';
+      activePopup.hidden=true;
+      document.body.classList.remove('popupOpen');
+      activePopup=null;
+      if(popupReturnFocus&&document.contains(popupReturnFocus))popupReturnFocus.focus();
+      if(pendingPopup){
+        var nextPopup=pendingPopup;
+        pendingPopup=null;
+        setTimeout(function(){openPopup(nextPopup.popupId);},180);
+      }
+    }
+
+    function setGoldOfferActive(isActive){
+      var card=document.querySelector('.planCard.recommended');
+      if(!card)return;
+      card.classList.toggle('offerActive',isActive);
+    }
+
+    function updateOfferTimer(){
+      var deadline=Number(popupSessionGet('pbGoldOfferDeadline'));
+      var remaining=Math.max(0,deadline-Date.now());
+      var minutes=Math.floor(remaining/60000);
+      var seconds=Math.floor((remaining%60000)/1000);
+      var timerText=String(minutes).padStart(2,'0')+':'+String(seconds).padStart(2,'0');
+      document.querySelectorAll('[data-offer-timer]').forEach(function(timerNode){timerNode.textContent=timerText;});
+      setGoldOfferActive(remaining>0);
+      if(remaining>0)return;
+      clearInterval(offerTicker);
+      var offerLink=document.getElementById('offerWhatsappCta');
+      if(offerLink){
+        offerLink.removeAttribute('href');
+        offerLink.classList.add('disabled');
+        offerLink.setAttribute('aria-disabled','true');
+        offerLink.textContent='Offer window ended';
+      }
+    }
+
+    function startOfferTimer(){
+      var deadline=Number(popupSessionGet('pbGoldOfferDeadline'));
+      if(!deadline||deadline<=Date.now()){
+        deadline=Date.now()+(20*60*1000);
+        popupSessionSet('pbGoldOfferDeadline',String(deadline));
+      }
+      clearInterval(offerTicker);
+      updateOfferTimer();
+      offerTicker=setInterval(updateOfferTimer,1000);
+    }
+
+    function getVideoEmbedUrl(href){
+      var driveMatch=href.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+      if(driveMatch)return 'https://drive.google.com/file/d/'+driveMatch[1]+'/preview';
+      var youtubeMatch=href.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/))([^?&/]+)/);
+      if(youtubeMatch)return 'https://www.youtube.com/embed/'+youtubeMatch[1]+'?autoplay=1&rel=0';
+      return '';
+    }
+
+    function openVideoPopup(card){
+      var embedUrl=getVideoEmbedUrl(card.href);
+      var popup=document.getElementById('videoPlayerPopup');
+      if(!embedUrl||!popup)return;
+      popupReturnFocus=card;
+      document.getElementById('videoPlayerTitle').textContent=(card.querySelector('.videoMeta b')||{}).textContent||'Student video';
+      document.getElementById('videoPlayerFrame').src=embedUrl;
+      popup.hidden=false;
+      activePopup=popup;
+      document.body.classList.add('popupOpen');
+      requestAnimationFrame(function(){popup.querySelector('[data-popup-close]').focus();});
+    }
+
+    function openPopup(popupId){
+      if(shownPopups[popupId])return true;
+      if(activePopup){pendingPopup={popupId:popupId};return true;}
+      var popup=document.getElementById(popupId);
+      if(!popup)return false;
+      shownPopups[popupId]=true;
+      popupReturnFocus=document.activeElement;
+      popup.hidden=false;
+      activePopup=popup;
+      document.body.classList.add('popupOpen');
+      if(popupId==='offerPopup')startOfferTimer();
+      requestAnimationFrame(function(){popup.querySelector('[data-popup-close]').focus();});
+      return true;
+    }
+
+    document.querySelectorAll('[data-popup-close]').forEach(function(button){button.addEventListener('click',closePopup);});
+    document.querySelectorAll('.videoCard').forEach(function(card){
+      card.addEventListener('click',function(event){event.preventDefault();openVideoPopup(card);});
+    });
+    document.querySelectorAll('.popupOverlay').forEach(function(overlay){
+      overlay.addEventListener('click',function(event){if(event.target===overlay)closePopup();});
+    });
+    document.addEventListener('keydown',function(event){if(event.key==='Escape')closePopup();});
+
+    function observePopupTrigger(selector,popupId){
+      var trigger=document.querySelector(selector);
+      if(!trigger)return;
+      var triggerObserver=new IntersectionObserver(function(entries){
+        if(!entries[0].isIntersecting)return;
+        if(openPopup(popupId))triggerObserver.disconnect();
+      },{threshold:.25});
+      triggerObserver.observe(trigger);
+    }
+
+    observePopupTrigger('#proof .sectionTitle','proofPopup');
+    observePopupTrigger('#guarantees .sectionTitle','offerPopup');
+
+    var existingOfferDeadline=Number(popupSessionGet('pbGoldOfferDeadline'));
+    if(existingOfferDeadline>Date.now()){
+      updateOfferTimer();
+      offerTicker=setInterval(updateOfferTimer,1000);
+    }else{
+      setGoldOfferActive(false);
+    }
+  </script>
+</body>
+</html>
