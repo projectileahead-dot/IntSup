@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Post-interview next steps and a complimentary Silver Community thank-you token from Prasad Boyane.">
+  <title>Thank You Token | Prasad Boyane</title>
+  <style>
+    :root{
+      --navy:#07384a;
+      --navy-deep:#052a38;
+      --navy-soft:#0b4f68;
+      --paper:#fbfaf7;
+      --card:#ffffff;
+      --text:#172126;
+      --muted:#68777e;
+      --line:#e8dfd0;
+      --gold:#c9a45c;
+      --gold-soft:#f8e8bd;
+      --orange:#ff934d;
+      --green:#20a86b;
+      --shadow:0 28px 80px rgba(7,56,74,.12);
+      --soft-shadow:0 14px 38px rgba(7,56,74,.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 8% 0,rgba(201,164,92,.15),transparent 28%),var(--paper);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    a{color:inherit}
+    button,input{font:inherit}
+    .page{width:min(1160px,calc(100% - 40px));margin:auto;padding:28px 0 52px}
+    .hero{position:relative;display:grid;grid-template-columns:1fr 300px;min-height:460px;overflow:hidden;border-radius:38px;background:linear-gradient(135deg,var(--navy),var(--navy-deep) 72%);box-shadow:var(--shadow);color:#fff}
+    .hero:before{content:"";position:absolute;right:-120px;top:-180px;width:500px;height:500px;border:1px solid rgba(255,255,255,.12);border-radius:50%;animation:orbit 20s linear infinite}
+    .heroCopy{position:relative;z-index:2;display:grid;align-content:center;padding:58px 20px 58px 64px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;width:max-content;color:var(--gold-soft);font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:34px;height:3px;background:var(--gold)}
+    h1{max-width:780px;margin:20px 0 0;font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,6vw,76px);font-weight:700;line-height:.98;letter-spacing:-.03em}
+    .heroLead{max-width:590px;margin:22px 0 0;color:rgba(255,255,255,.72);font-size:16px;line-height:1.7}
+    .heroActions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 19px;border:1px solid transparent;border-radius:999px;background:var(--gold);color:#2d2010;font-size:13px;font-weight:900;text-decoration:none;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.15)}
+    .btn.secondary{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff}
+    .portraitWrap{position:relative;z-index:1;display:flex;align-items:end;justify-content:center;padding:30px 22px 0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.12))}
+    .portraitWrap:before{content:"PB";position:absolute;top:42px;color:rgba(255,255,255,.06);font:900 128px/1 Arial,sans-serif}
+    .portrait{position:relative;z-index:2;width:min(100%,270px);max-height:410px;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.26));animation:softFloat 4.8s ease-in-out infinite}
+    .section{padding:76px 0}
+    .sectionHead{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:26px}
+    .sectionHeadText{max-width:700px}
+    .kicker{display:inline-flex;align-items:center;gap:9px;color:var(--navy-soft);font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
+    .kicker:before{content:"";width:26px;height:3px;background:var(--gold)}
+    h2{margin:12px 0 0;color:var(--navy);font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,4vw,52px);line-height:1.04;letter-spacing:-.025em}
+    .sectionIntro{max-width:620px;margin:13px 0 0;color:var(--muted);line-height:1.7}
+    .progressBox{min-width:210px;padding:15px 17px;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--soft-shadow)}
+    .progressLabel{display:flex;justify-content:space-between;gap:12px;margin-bottom:9px;color:var(--muted);font-size:12px;font-weight:800}
+    .progressTrack{height:8px;overflow:hidden;border-radius:999px;background:#eee7dc}
+    .progressBar{width:0;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--gold),var(--navy-soft));transition:width .35s ease}
+    .steps{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .steps:before{content:"";position:absolute;top:31px;left:8%;right:8%;height:2px;background:linear-gradient(90deg,var(--gold),var(--navy-soft))}
+    .step{position:relative;min-width:0}
+    .step input{position:absolute;opacity:0;pointer-events:none}
+    .stepCard{position:relative;display:block;height:100%;min-height:255px;padding:78px 20px 22px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:var(--soft-shadow);cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .stepCard:hover{transform:translateY(-4px);box-shadow:0 22px 46px rgba(7,56,74,.12)}
+    .stepNumber{position:absolute;z-index:2;top:7px;left:50%;display:grid;place-items:center;width:50px;height:50px;transform:translateX(-50%);border:6px solid var(--paper);border-radius:50%;background:var(--navy);color:#fff;font-weight:900;box-shadow:0 0 0 2px var(--gold)}
+    .stepCard h3{margin:0;color:var(--navy);font-size:17px;line-height:1.3}
+    .stepCard p{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+    .stepCard strong{color:var(--text)}
+    .stepCheck{position:absolute;right:16px;bottom:15px;display:grid;place-items:center;width:28px;height:28px;border:2px solid #cfc6b8;border-radius:9px;color:transparent;font-weight:900;transition:.2s}
+    .step input:focus-visible+.stepCard{outline:3px solid rgba(7,56,74,.28);outline-offset:3px}
+    .step input:checked+.stepCard{border-color:rgba(32,168,107,.38);background:#f4fcf8}
+    .step input:checked+.stepCard .stepNumber{background:var(--green);box-shadow:0 0 0 2px rgba(32,168,107,.35)}
+    .step input:checked+.stepCard .stepCheck{border-color:var(--green);background:var(--green);color:#fff}
+    .referralOffer{position:relative;overflow:hidden;border-radius:28px;background:var(--navy);box-shadow:var(--shadow);color:#fff}
+    .referralOffer:before{content:"";position:absolute;inset:-80%;background:conic-gradient(from 90deg,transparent,rgba(255,213,101,.16),transparent 24%);animation:offerShine 5s linear infinite;pointer-events:none}
+    .giftTeaser{position:relative;z-index:1;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;width:100%;padding:25px 30px;border:1px solid rgba(255,213,101,.28);border-radius:inherit;background:transparent;color:#fff;text-align:left;cursor:pointer}
+    .giftTeaser:focus-visible{outline:3px solid var(--gold);outline-offset:-5px}
+    .giftIcon{display:grid;place-items:center;width:58px;height:58px;border-radius:18px;background:var(--gold);font-size:30px;box-shadow:0 0 0 0 rgba(255,213,101,.56);animation:giftGlow 1.8s ease-in-out infinite}
+    .giftTeaserText span{display:block;color:var(--gold-soft);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+    .giftTeaserText strong{display:block;margin-top:5px;font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.1}
+    .unlockLabel{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;color:var(--gold-soft);font-size:13px;font-weight:900}
+    .unlockLabel:after{content:"↓";display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(255,255,255,.24);border-radius:50%;transition:transform .3s ease}
+    .referralOffer.open .unlockLabel:after{transform:rotate(180deg)}
+    .referralDetails{position:relative;z-index:1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+    .referralOffer.open .referralDetails{grid-template-rows:1fr}
+    .referralDetailsInner{overflow:hidden}
+    .referralContent{padding:4px 30px 30px;border-top:1px solid rgba(255,255,255,.1)}
+    .referralIntro{max-width:680px;margin:22px 0;color:rgba(255,255,255,.72);font-size:14px;line-height:1.65}
+    .referralPoints{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .referralPoint{padding:20px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.07)}
+    .referralPointNumber{display:grid;place-items:center;width:31px;height:31px;margin-bottom:14px;border-radius:10px;background:var(--gold);color:#2d2010;font-size:12px;font-weight:950}
+    .referralPoint h3{margin:0;color:#fff;font-size:16px;line-height:1.4}
+    .referralPoint h3 strong{color:var(--gold-soft)}
+    .referralPoint p{margin:9px 0 0;color:rgba(255,255,255,.68);font-size:12px;line-height:1.6}
+    .tierList{display:grid;gap:5px;margin:11px 0 0;padding:0;list-style:none;color:rgba(255,255,255,.78);font-size:12px;line-height:1.45}
+    .tierList b{color:var(--gold-soft)}
+    .winnerNote{font-style:italic}
+    .referralAction{margin-top:20px}
+    .referralAction .btn{min-width:165px}
+    .referralOffer.embedded{border:1px solid rgba(126,106,57,.2);border-radius:20px;background:rgba(255,248,216,.78);box-shadow:none;color:var(--navy)}
+    .referralOffer.embedded:before{background:conic-gradient(from 90deg,transparent,rgba(255,184,62,.2),transparent 25%)}
+    .embedded .giftTeaser{grid-template-columns:auto 1fr auto;padding:16px;border-color:rgba(126,106,57,.14);color:var(--navy)}
+    .embedded .giftIcon{width:44px;height:44px;border-radius:15px;background:#fff;font-size:23px}
+    .embedded .giftTeaserText span{color:#7e6a39}
+    .embedded .giftTeaserText strong{font-family:inherit;font-size:15px;line-height:1.35}
+    .embedded .unlockLabel{color:#7e6a39}
+    .embedded .unlockLabel:after{border-color:rgba(7,56,74,.18)}
+    .embedded .referralContent{border-top-color:rgba(7,56,74,.11)}
+    .embedded .referralIntro{color:#5f6260}
+    .embedded .referralPoint{border-color:rgba(7,56,74,.11);background:rgba(255,255,255,.55)}
+    .embedded .referralPoint h3{color:var(--navy)}
+    .embedded .referralPoint h3 strong,.embedded .tierList b{color:#8a5e00}
+    .embedded .referralPoint p,.embedded .tierList{color:#5f6260}
+    .embedded .referralAction .btn{background:var(--navy);color:#fff}
+    .giftSection{padding-top:22px}
+    .giftCard{position:relative;display:grid;grid-template-columns:1fr 330px;overflow:hidden;border:1px solid #efcf8d;border-radius:34px;background:linear-gradient(135deg,#fff7d8,#ffd565 42%,#ff934d);box-shadow:var(--shadow)}
+    .giftCopy{padding:46px 48px}
+    .giftKicker{display:inline-flex;align-items:center;gap:9px;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.65);color:var(--navy);font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .giftCard h2{max-width:620px;margin-top:18px;font-size:clamp(34px,4vw,52px)}
+    .giftCard h2 span{display:block;margin-top:8px;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+    .benefits{display:grid;gap:13px;margin-top:28px}
+    .benefit{display:grid;grid-template-columns:44px 1fr auto;gap:13px;align-items:center;padding:16px;border:1px solid rgba(7,56,74,.11);border-radius:20px;background:rgba(255,255,255,.58)}
+    .benefitIcon{display:grid;place-items:center;width:42px;height:42px;border-radius:15px;background:#fff;font-size:22px}
+    .benefit b{display:block;color:var(--navy);font-size:15px;line-height:1.35}
+    .benefit p{margin:5px 0 0;color:#5f6260;font-size:13px;line-height:1.5}
+    .benefitValue{color:#7e6a39;font-size:12px;font-weight:900;text-align:right}
+    .giftActions{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px}
+    .giftActions .btn{background:var(--navy);color:#fff}
+    .giftActions .btn.secondary{border-color:rgba(7,56,74,.2);background:rgba(255,255,255,.65);color:var(--navy)}
+    .giftVisual{position:relative;display:flex;align-items:end;justify-content:center;padding:36px 24px 0;background:rgba(7,56,74,.08)}
+    .giftVisual:before{content:"THANK YOU";position:absolute;top:34px;color:rgba(7,56,74,.11);font:900 46px/1 Arial,sans-serif;writing-mode:vertical-rl}
+    .giftPortrait{position:relative;z-index:2;width:min(100%,260px);max-height:380px;object-fit:contain;filter:grayscale(1) drop-shadow(0 20px 28px rgba(7,56,74,.2))}
+    .priceTag{position:absolute;z-index:3;right:22px;bottom:22px;min-width:164px;padding:16px 18px;border:1px solid rgba(255,255,255,.8);border-radius:22px;background:rgba(255,255,255,.88);text-align:center;box-shadow:var(--soft-shadow);backdrop-filter:blur(12px)}
+    .priceFree{display:block;color:#e32828;font-size:38px;font-weight:950;line-height:1}
+    .priceOld{display:inline-block;margin-top:8px;color:var(--navy);font-size:21px;font-weight:900;text-decoration:line-through;text-decoration-color:#e32828;text-decoration-thickness:2px}
+    .footer{padding-top:28px;text-align:center;color:#91999d;font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .toast{position:fixed;left:50%;bottom:24px;z-index:20;padding:12px 18px;transform:translate(-50%,20px);border-radius:999px;background:var(--navy);color:#fff;font-size:12px;font-weight:850;opacity:0;pointer-events:none;transition:.25s}.toast.show{transform:translate(-50%,0);opacity:1}
+    .celebration{position:fixed;inset:0;z-index:100;width:100%;height:100%;pointer-events:none}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    @keyframes softFloat{50%{transform:translateY(-8px)}}
+    @keyframes giftGlow{50%{transform:translateY(-3px) scale(1.04);box-shadow:0 0 0 12px rgba(255,213,101,0),0 0 30px rgba(255,213,101,.42)}}
+    @keyframes offerShine{to{transform:rotate(360deg)}}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.heroCopy{padding:46px 34px 20px}.portraitWrap{min-height:280px}.portrait{max-height:285px}.sectionHead{align-items:stretch;flex-direction:column}.progressBox{min-width:0}.steps{grid-template-columns:repeat(2,1fr)}.steps:before{display:none}.referralPoints{grid-template-columns:1fr}.giftCard{grid-template-columns:1fr}.giftVisual{min-height:340px}.giftVisual:before{writing-mode:horizontal-tb}.giftPortrait{max-height:320px}}
+    @media(max-width:600px){.page{width:min(94vw,1160px);padding-top:14px}.hero{border-radius:26px}.heroCopy{padding:38px 22px 18px}.heroLead{font-size:14px}.heroActions{display:grid}.btn{width:100%}.section{padding:54px 0}.steps{grid-template-columns:1fr}.stepCard{min-height:0;padding:24px 52px 24px 68px}.stepNumber{top:50%;left:8px;transform:translateY(-50%)}.stepCheck{right:14px;bottom:auto;top:50%;transform:translateY(-50%)}.giftTeaser,.embedded .giftTeaser{grid-template-columns:auto 1fr;padding:20px}.giftIcon{width:50px;height:50px;font-size:26px}.giftTeaserText strong{font-size:22px}.embedded .giftTeaserText strong{font-size:15px}.unlockLabel{grid-column:1/-1;justify-content:center;padding-top:5px}.referralContent{padding:3px 20px 24px}.giftCopy{padding:34px 22px}.benefit{grid-template-columns:40px 1fr}.benefitValue{grid-column:2;text-align:left}.giftVisual{min-height:300px}.giftPortrait{max-height:280px}.priceTag{right:14px;bottom:14px;min-width:138px}.priceFree{font-size:32px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero:before,.portrait,.btn,.referralOffer:before,.giftIcon{animation:none;transition:none}.referralDetails{transition:none}}
+  </style>
+</head>
+<body>
+  <canvas class="celebration" id="celebration" aria-hidden="true"></canvas>
+  <main class="page">
+    <header class="hero">
+      <div class="heroCopy">
+        <div class="eyebrow">Post-interview thank you token</div>
+        <h1>It’s been great working together.</h1>
+        <p class="heroLead">Your interview may be over, but the follow-up matters. Use this page to complete the next steps, stay visible to the right people, and claim your complimentary Silver Community access.</p>
+        <div class="heroActions">
+          <a class="btn" href="#next-steps">See next steps</a>
+          <a class="btn secondary" href="#thank-you-gift">View your gift</a>
+        </div>
+      </div>
+      <div class="portraitWrap"><img class="portrait" src="../assets/prasad-photo.png" alt="Prasad Boyane"></div>
+    </header>
+
+    <section class="section" id="next-steps">
+      <div class="sectionHead">
+        <div class="sectionHeadText">
+          <div class="kicker">What to do next</div>
+          <h2>Four simple follow-up steps.</h2>
+          <p class="sectionIntro">Mark each action when complete. Your progress is saved in this browser so you can return without starting over.</p>
+        </div>
+        <div class="progressBox" aria-live="polite">
+          <div class="progressLabel"><span>Progress</span><strong><span id="completed">0</span>/4 complete</strong></div>
+          <div class="progressTrack"><div class="progressBar" id="progressBar"></div></div>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <input type="checkbox" id="step-1">
+          <label class="stepCard" for="step-1"><span class="stepNumber">01</span><h3>Notify your HR coordinator</h3><p><strong>Email or call immediately</strong> to confirm the interview is complete and ask for the tentative feedback timeline.</p><span class="stepCheck">✓</span></label>
+        </div>
+        <div class="step">
+          <input type="checkbox" id="step-2">
+          <label class="stepCard" for="step-2"><span class="stepNumber">02</span><h3>Follow up consistently</h3><p>If there is no response by email or phone, try reaching out again <strong>every two days</strong>.</p><span class="stepCheck">✓</span></label>
+        </div>
+        <div class="step">
+          <input type="checkbox" id="step-3">
+          <label class="stepCard" for="step-3"><span class="stepNumber">03</span><h3>Build LinkedIn familiarity</h3><p>Connect with at least three people and engage with their posts for one week. <strong>Do not message directly yet.</strong></p><span class="stepCheck">✓</span></label>
+        </div>
+        <div class="step">
+          <input type="checkbox" id="step-4">
+          <label class="stepCard" for="step-4"><span class="stepNumber">04</span><h3>Set up a quick call</h3><p>After one week, request a short conversation to learn the HR contact, hiring context, or general company culture.</p><span class="stepCheck">✓</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section giftSection" id="thank-you-gift">
+      <div class="giftCard">
+        <div class="giftCopy">
+          <div class="giftKicker">A thank-you token for you</div>
+          <h2>My special <span>Silver Community Access</span></h2>
+          <div class="benefits">
+            <section class="referralOffer embedded" id="referral-offer" aria-labelledby="referral-title">
+              <button class="giftTeaser" id="giftTeaser" type="button" aria-expanded="false" aria-controls="referral-details">
+                <span class="giftIcon" aria-hidden="true">🎁</span>
+                <span class="giftTeaserText"><span>A reward for sharing</span><strong id="referral-title">Your referral and you both receive upto 40% off</strong></span>
+                <span class="unlockLabel">Unlock gift now</span>
+              </button>
+              <div class="referralDetails" id="referral-details" aria-hidden="true" inert>
+                <div class="referralDetailsInner">
+                  <div class="referralContent">
+                    <p class="referralIntro">Help a friend get the right interview support and unlock increasingly valuable rewards for yourself.</p>
+                    <div class="referralPoints">
+                      <article class="referralPoint"><span class="referralPointNumber">01</span><h3>Your friend gets <strong>up to 10% off</strong></h3><p>A useful saving that makes professional interview support easier to access.</p></article>
+                      <article class="referralPoint"><span class="referralPointNumber">02</span><h3>You get <strong>up to 45% off</strong></h3><p>Monthly tiered referral bonuses:</p><ul class="tierList"><li>1st referral → <b>up to 10%</b></li><li>2nd referral → <b>up to 15%</b></li><li>3rd+ referrals → <b>up to 20%</b></li></ul></article>
+                      <article class="referralPoint"><span class="referralPointNumber">03</span><h3>Chance to win <strong>one free interview</strong></h3><p>One lucky winner annually receives a free interview worth $190.</p><p class="winnerNote">Yep, you read that right: one free interview for one lucky winner.</p></article>
+                    </div>
+                    <div class="referralAction"><a class="btn" href="https://wa.me/?text=I%20had%20great%20experience%20working%20with%20Prasad.%20Feel%20free%20to%20contact%20him%20on%20whatsapp%20%2B91%208087434188" target="_blank" rel="noopener">Refer now</a></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="benefit"><div class="benefitIcon">✦</div><div><b>Weekly bite-sized IT newsletter</b><p>Data Engineering and AI updates delivered to WhatsApp for one full year. No spam.</p></div><div class="benefitValue">Worth $39</div></div>
+          </div>
+          <div class="giftActions">
+            <a class="btn" href="https://whatsapp.com/channel/0029Va4yIfdDzgTJNE9Q133q" target="_blank" rel="noopener">Join Silver Community</a>
+            <a class="btn secondary" href="https://wa.me/?text=I%20had%20great%20experience%20working%20with%20Prasad.%20Feel%20free%20to%20contact%20him%20on%20whatsapp%20%2B91%208087434188" target="_blank" rel="noopener">Refer your friend</a>
+          </div>
+        </div>
+        <div class="giftVisual">
+          <img class="giftPortrait" src="../assets/prasad-photo.png" alt="Prasad Boyane">
+          <div class="priceTag"><span class="priceFree">$0</span><span class="priceOld">$79</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">Prasad Boyane · Interview Support</footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite">Progress saved</div>
+
+  <script>
+    const boxes=[...document.querySelectorAll('.step input')];
+    const completed=document.getElementById('completed');
+    const progressBar=document.getElementById('progressBar');
+    const toast=document.getElementById('toast');
+    const referralOffer=document.getElementById('referral-offer');
+    const giftTeaser=document.getElementById('giftTeaser');
+    const referralDetails=document.getElementById('referral-details');
+    let toastTimer;
+
+    giftTeaser.addEventListener('click',()=>{
+      const isOpen=referralOffer.classList.toggle('open');
+      giftTeaser.setAttribute('aria-expanded',String(isOpen));
+      referralDetails.setAttribute('aria-hidden',String(!isOpen));
+      referralDetails.inert=!isOpen;
+      giftTeaser.querySelector('.unlockLabel').firstChild.textContent=isOpen?'Hide gift ':'Unlock gift now ';
+    });
+
+    function startCelebration(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      const canvas=document.getElementById('celebration');
+      const context=canvas.getContext('2d');
+      const colors=['#ffd565','#ff7d4d','#07384a','#20a86b','#ffffff','#dd3f75'];
+      const particles=[];
+      const started=performance.now();
+      let lastBurst=0;
+
+      function resize(){
+        const ratio=Math.min(window.devicePixelRatio||1,2);
+        canvas.width=innerWidth*ratio;
+        canvas.height=innerHeight*ratio;
+        canvas.style.width=innerWidth+'px';
+        canvas.style.height=innerHeight+'px';
+        context.setTransform(ratio,0,0,ratio,0,0);
+      }
+
+      function burst(side){
+        const direction=side==='left'?1:-1;
+        const originX=side==='left'?18:innerWidth-18;
+        for(let index=0;index<22;index++){
+          particles.push({
+            x:originX,
+            y:innerHeight-18,
+            vx:direction*(3.2+Math.random()*7.2),
+            vy:-(8+Math.random()*9),
+            gravity:.18+Math.random()*.08,
+            rotation:Math.random()*Math.PI,
+            spin:(Math.random()-.5)*.28,
+            size:5+Math.random()*7,
+            color:colors[Math.floor(Math.random()*colors.length)],
+            shape:Math.random()>.35?'rect':'circle',
+            opacity:1
+          });
+        }
+      }
+
+      function draw(now){
+        const elapsed=now-started;
+        context.clearRect(0,0,innerWidth,innerHeight);
+        if(elapsed<1150&&now-lastBurst>210){
+          burst('left');
+          burst('right');
+          lastBurst=now;
+        }
+        particles.forEach(particle=>{
+          particle.x+=particle.vx;
+          particle.y+=particle.vy;
+          particle.vy+=particle.gravity;
+          particle.vx*=.995;
+          particle.rotation+=particle.spin;
+          if(elapsed>2200)particle.opacity=Math.max(0,1-(elapsed-2200)/800);
+          context.save();
+          context.globalAlpha=particle.opacity;
+          context.translate(particle.x,particle.y);
+          context.rotate(particle.rotation);
+          context.fillStyle=particle.color;
+          if(particle.shape==='circle'){
+            context.beginPath();
+            context.arc(0,0,particle.size/2,0,Math.PI*2);
+            context.fill();
+          }else{
+            context.fillRect(-particle.size/2,-particle.size/3,particle.size,particle.size*.66);
+          }
+          context.restore();
+        });
+        if(elapsed<3000)requestAnimationFrame(draw);
+        else canvas.remove();
+      }
+
+      resize();
+      addEventListener('resize',resize,{passive:true});
+      requestAnimationFrame(draw);
+      setTimeout(()=>removeEventListener('resize',resize),3000);
+    }
+
+    function updateProgress(showToast){
+      const count=boxes.filter(box=>box.checked).length;
+      completed.textContent=count;
+      progressBar.style.width=(count/boxes.length*100)+'%';
+      if(showToast){
+        toast.textContent=count===boxes.length?'All next steps completed':'Progress saved';
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer=setTimeout(()=>toast.classList.remove('show'),1600);
+      }
+    }
+
+    boxes.forEach((box,index)=>{
+      try{box.checked=localStorage.getItem('tyt-next-step-'+index)==='1';}catch(error){}
+      box.addEventListener('change',()=>{
+        try{localStorage.setItem('tyt-next-step-'+index,box.checked?'1':'0');}catch(error){}
+        updateProgress(true);
+      });
+    });
+    updateProgress(false);
+    startCelebration();
+  </script>
+</body>
+</html>
