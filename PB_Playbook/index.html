@@ -83,6 +83,28 @@ a{color:inherit}
 .price-main{display:flex;justify-content:space-between;gap:14px;align-items:baseline}
 .price-name{font-size:19px;font-weight:900}.price{font-size:20px;font-weight:950;white-space:nowrap}
 .price-note{font-size:9px;line-height:1.35;opacity:.65;margin-top:4px}
+.accelerator-row{padding:0!important}
+.accelerator-row details{width:100%}
+.accelerator-row summary{position:relative;display:block;padding:18px 30px 18px 0;cursor:pointer;list-style:none}
+.accelerator-row summary::-webkit-details-marker{display:none}
+.accelerator-row summary:after{content:"+";position:absolute;right:2px;top:17px;display:grid;place-items:center;width:22px;height:22px;border:1px solid rgba(21,29,32,.35);border-radius:50%;font-size:15px;font-weight:950;transition:transform .25s ease}
+.accelerator-row details[open] summary:after{transform:rotate(45deg)}
+.accelerator-row summary:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.accelerator-row .price-main{padding-right:7px}
+.accelerator-row .price-note{padding-right:20px}
+.accelerator-content{margin:0 -10px 8px;padding:17px 14px;border:1px solid rgba(21,29,32,.16);border-radius:16px;background:rgba(255,255,255,.28)}
+.accelerator-lead{margin:0;color:#17272d;font-size:11px;font-weight:800;line-height:1.5}
+.accelerator-focus{margin:12px 0;padding:10px 11px;border-left:4px solid #17313a;background:rgba(255,255,255,.48);font-size:10px;line-height:1.45}
+.accelerator-focus strong{display:block;margin-bottom:2px;font-size:11px}
+.accelerator-includes{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.accelerator-includes li{position:relative;padding-left:15px;font-size:9.5px;font-weight:750;line-height:1.45}.accelerator-includes li:before{content:"✓";position:absolute;left:0;color:#126147;font-weight:950}
+.accelerator-plans{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}
+.accelerator-plan{padding:12px;border:1px solid rgba(21,29,32,.15);border-radius:12px;background:rgba(255,255,255,.46)}
+.accelerator-plan.recommended{border:2px solid #126147;background:rgba(229,255,241,.68)}
+.accelerator-plan-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.accelerator-plan h3{margin:0;font-size:11px;line-height:1.3}.accelerator-plan-price{white-space:nowrap;font-size:11px;font-weight:950}
+.accelerator-badge{display:inline-block;margin:6px 0;padding:4px 7px;border-radius:999px;background:#17313a;color:#fff;font-size:7px;font-weight:950;letter-spacing:.08em}.recommended .accelerator-badge{background:#126147}
+.accelerator-plan p{margin:5px 0 0;font-size:8.5px;line-height:1.45}.accelerator-plan ul{display:grid;gap:4px;margin:7px 0 0;padding-left:14px;font-size:8.5px;line-height:1.35}
+.accelerator-disclaimer{margin:12px 0 0;padding-top:10px;border-top:1px solid rgba(21,29,32,.2);font-size:8px;font-weight:750;line-height:1.45}
 .notes{margin-top:22px;padding-top:18px;border-top:1px solid rgba(21,29,32,.55);font-size:12px;line-height:1.5}
 .playbook-content{padding-top:4px}
 .pill{
@@ -124,7 +146,7 @@ a{color:inherit}
   .hero-stats{gap:24px}.stat .num{font-size:50px}.stat .label{font-size:13px}
   .roles{grid-template-columns:1fr 1fr}.role{font-size:13px}
   .expertise{padding:22px 18px}.expertise h3{font-size:16px}.portrait{width:145px}
-  .pricing-card h1{font-size:34px}.price-name{font-size:16px}.price{font-size:18px}
+  .pricing-card h1{font-size:34px}.price-name{font-size:16px}.price{font-size:18px}.accelerator-plans{grid-template-columns:1fr}
 }
 
 /* --- Readability + interaction upgrades --- */
@@ -336,6 +358,35 @@ a{color:inherit}
   }
 }
 
+/* Affiliate referral offer */
+.affiliate-inline{clear:both;margin:10px 0 28px;overflow:hidden;border:1px solid rgba(255,210,74,.55);border-radius:18px;background:rgba(255,210,74,.08)}
+.affiliate-inline summary{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:13px;padding:17px 18px;cursor:pointer;list-style:none;background:linear-gradient(90deg,#ffe36b,#ff9b35);color:#14242a;font-weight:950}
+.affiliate-inline summary::-webkit-details-marker{display:none}
+.affiliate-gift{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.72);font-size:21px}
+.affiliate-summary-copy{line-height:1.25}.affiliate-summary-copy small{display:block;margin-bottom:3px;font-size:8px;letter-spacing:.13em;text-transform:uppercase;opacity:.68}
+.affiliate-toggle{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:10px}.affiliate-toggle:after{content:"↓";display:grid;place-items:center;width:26px;height:26px;border:1px solid rgba(20,36,42,.25);border-radius:50%;transition:transform .25s ease}
+.affiliate-inline[open] .affiliate-toggle:after{transform:rotate(180deg)}
+.affiliate-inline-content{padding:18px}
+.affiliate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.affiliate-point{min-width:0;padding:16px;border:1px solid rgba(255,210,74,.28);border-radius:14px;background:rgba(255,255,255,.07)}
+.affiliate-point-number{display:grid;place-items:center;width:28px;height:28px;margin-bottom:11px;border-radius:8px;background:#ffd24a;color:#15252b;font-size:9px;font-weight:950}
+.affiliate-point h3{margin:0;color:var(--ink);font-size:14px;line-height:1.4}.affiliate-point h3 strong{color:#ffd24a}
+.affiliate-point p{margin:8px 0 0;color:var(--muted);font-size:10px;line-height:1.55}
+.affiliate-tiers{display:grid;gap:4px;margin:9px 0 0;padding:0;list-style:none;color:rgba(248,242,223,.82);font-size:10px;line-height:1.45}.affiliate-tiers b{color:#ffd24a}
+.affiliate-note{font-style:italic}
+.affiliate-action{display:inline-flex;align-items:center;justify-content:center;min-height:43px;margin-top:16px;padding:0 20px;border-radius:999px;background:linear-gradient(135deg,#ffd24a,#ff9b35);color:#15252b;text-decoration:none;font-size:11px;font-weight:950;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:transform .2s ease}.affiliate-action:hover{transform:translateY(-2px)}
+.affiliate-modal{position:fixed;inset:0;z-index:10020;display:grid;place-items:center;padding:20px;background:rgba(2,20,27,.76);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.affiliate-modal.open{opacity:1;visibility:visible}
+.affiliate-dialog{position:relative;width:min(820px,96vw);max-height:min(90vh,720px);overflow:auto;padding:32px;border:1px solid rgba(255,210,74,.42);border-radius:24px;background:linear-gradient(145deg,#0a4052,#062c3a);box-shadow:0 28px 80px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .25s ease}
+.affiliate-modal.open .affiliate-dialog{transform:none}
+.affiliate-close{position:absolute;top:13px;right:13px;display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:24px;line-height:1;cursor:pointer}
+.affiliate-kicker{color:#ffd24a;font-size:9px;font-weight:950;letter-spacing:.15em;text-transform:uppercase}
+.affiliate-dialog h2{max-width:620px;margin:8px 45px 8px 0;font-size:29px;line-height:1.08}
+.affiliate-dialog-intro{max-width:650px;margin:0 0 20px;color:var(--muted);font-size:12px;line-height:1.6}
+body.modal-open{overflow:hidden}
+@media(max-width:700px){.affiliate-grid{grid-template-columns:1fr}.affiliate-inline summary{grid-template-columns:auto 1fr}.affiliate-toggle{grid-column:1/-1;justify-content:center}.affiliate-dialog{padding:26px 18px}.affiliate-dialog h2{font-size:23px}.affiliate-point{padding:14px}}
+@media(prefers-reduced-motion:reduce){.affiliate-modal,.affiliate-dialog,.affiliate-toggle:after,.affiliate-action{transition:none}}
+
 </style>
 </head>
 <body>
@@ -411,11 +462,11 @@ a{color:inherit}
     <h1>INTERVIEW<br>PLAYBOOKS</h1>
 
     <div class="price-row">
-      <div class="price-main"><span class="price-name">30 Mins Support</span><span class="price">160$</span></div>
+      <div class="price-main"><span class="price-name">30 Mins Support</span><span class="price">170$</span></div>
       <div class="price-note">+ Readymade Scripts, Tools, Resume Review, Checklists, Mock Rounds</div>
     </div>
     <div class="price-row">
-      <div class="price-main"><span class="price-title-wrap"><span class="price-name">1 Hour Support</span><span class="price-tag popular">MOST POPULAR</span></span><span class="price">190$</span></div>
+      <div class="price-main"><span class="price-title-wrap"><span class="price-name">1 Hour Support</span><span class="price-tag popular">MOST POPULAR</span></span><span class="price">200$</span></div>
       <div class="price-note">+ Readymade Scripts, Tools, Resume Review, Checklists, Mock Rounds</div>
       
     </div>
@@ -425,18 +476,69 @@ a{color:inherit}
       <div class="price-note">1 round = 1 hr Call Max. | Late night charges Excluded</div>
       
     </div>
-    <div class="price-row">
-      <div class="price-main"><span class="price-name">1 Year Interview Support</span><span class="price">3000$</span></div>
-      <div class="price-note">+ All above Inclusive, Flat 3000 INR Refferal Bonus (+5), Free 10x Runbroker Access</div>
-      <div class="price-note">1 round = 1 hr Call Max. | Late night charges Excluded</div>
+    <div class="price-row accelerator-row">
+      <details id="job-success-program">
+        <summary>
+          <div class="price-main"><span class="price-title-wrap"><span class="price-name">Done-for-You Job Success Program<!--</span><span class="price-tag popular">1-YEAR GUARANTEE</span> -->
+		  </span><span class="price">3600$</span></div>
+          <div class="price-note">A complete job-search service designed to take you from opportunity discovery to offer negotiation</div>
+        </summary>
+        <div class="accelerator-content">
+          <p class="accelerator-lead">We manage your end-to-end job search so you can focus on becoming interview-ready and landing the right role.</p>
+          <div class="accelerator-focus"><strong>Your job search, handled with you.</strong>We build the strategy, execute the daily work and keep every opportunity moving forward.</div>
+          <ul class="accelerator-includes">
+            <li><b>Find and apply to suitable jobs:</b> identify relevant openings, manage applications, track progress and follow up.</li>
+            <li><b>Tailor your CV for each role:</b> curate your resume to match the job description and highlight your strongest experience.</li>
+            <li><b>Prepare you to perform:</b> provide role-focused training, interview preparation and ongoing support.</li>
+            <li><b>Build your professional presence:</b> manage social-media positioning, strengthen your personal brand and improve visibility.</li>
+            <li><b>Support the offer stage:</b> maintain the pipeline, follow up with employers and help negotiate your offer.</li>
+          </ul>
+          <div class="accelerator-focus"><strong>100% job guarantee within one year.</strong>If you do not secure a job within 12 months, we will continue working for you at no service charge until you get hired, or provide 50% money back.</div>
+        </div>
+      </details>
     </div>
-    <div class="price-row">
+    <div class="price-row accelerator-row">
+      <details id="on-site-accelerator">
+        <summary>
+          <div class="price-main"><span class="price-title-wrap"><span class="price-name">On-Site Interview Accelerator<!--</span><span class="price-tag value">INTENSIVE</span>-->
+		  </span><span class="price">320$</span></div>
+          <div class="price-note">3- or 7-day role-specific preparation for an on-site interview within the next week</div>
+        </summary>
+        <div class="accelerator-content">
+          <p class="accelerator-lead">Walk into your on-site interview with clear CV-based stories, structured answers and a practical execution plan built from your CV, LinkedIn profile, job description and interview format.</p>
+          <div class="accelerator-focus"><strong>Focused preparation, not just more mocks.</strong>Identify gaps, drill the highest-risk areas and turn your actual experience into confident, repeatable performance.</div>
+          <ul class="accelerator-includes">
+            <li><b>Personal diagnostic and plan:</b> target role, format, strengths, gaps, daily priorities, recommended tools and preparation resources.</li>
+            <li><b>Three realistic mocks with written feedback:</b> behavioral, hiring-manager, technical, case, system-design or stakeholder rounds.</li>
+            <li><b>6-8 story STAR bank:</b> role-specific stories built from your real CV, plus likely questions and structured answers.</li>
+            <li><b>Final rehearsal and strategy:</b> introduction, interviewer questions, round transitions, confidence, energy and difficult-question recovery.</li>
+            <li><b>Interview-day checklist:</b> documents, attire, route, logistics, questions to ask and follow-up message.</li>
+          </ul>
+          <div class="accelerator-plans">
+            <article class="accelerator-plan">
+              <div class="accelerator-plan-head"><h3>3-Day Emergency Sprint</h3><span class="accelerator-plan-price">₹20,000</span></div>
+              <span class="accelerator-badge">INTERVIEW WITHIN 3 DAYS</span>
+              <p>Compressed support when time is tight.</p>
+              <ul><li>Customized 3-day study and execution plan</li><li>Three mocks, written feedback and final rehearsal</li><li>LinkedIn positioning and message review for one week</li></ul>
+            </article>
+            <article class="accelerator-plan recommended">
+              <div class="accelerator-plan-head"><h3>7-Day Deep Preparation Sprint</h3><span class="accelerator-plan-price">₹30,000</span></div>
+              <span class="accelerator-badge">RECOMMENDED · INTERVIEW IN 4-7 DAYS</span>
+              <p>Everything in the 3-Day Sprint, with room to apply feedback.</p>
+              <ul><li>7-day calendar with daily priorities</li><li>Deeper role, company and interviewer research</li><li>LinkedIn optimization and networking-message review</li><li>Final communication and on-site logistics rehearsal</li><li>15-minute post-interview debrief included</li></ul>
+            </article>
+          </div>
+          <p class="accelerator-disclaimer"><b>Preparation support only.</b> You attend and answer every interview yourself. No proxy, impersonation, fabricated experience, interview participation, job-offer guarantee or immigration advice is included.</p>
+        </div>
+      </details>
+    </div>
+    <div class="price-row" id="late-night-fees">
       <div class="price-main"><span class="price-name">Late Night Charges</span><span class="price">+ 15$</span></div>
       <div class="price-note">per late hour</div>
     </div>
 
     <div class="notes">
-      While our seevices provide comprehensive guidance, we can't guarantee specific results as success depends on individual effort, preparation, prompt following skills and market conditions and technical setup. Our service fees will be strictly for reserved time slot and invariable of incedents like slot extenstion, early call completion, extra support or technical glitches. We're here to equip you with the best tools, but personal prepararion are key to your success!
+      Except for the one-year service commitment and remedy stated in the Done-for-You Job Success Program, results depend on individual effort, preparation, prompt-following skills, market conditions and technical setup. Our service fees are strictly for the reserved time slot and remain unchanged for incidents such as slot extension, early call completion, extra support or technical glitches. We're here to equip you with the best tools, but personal preparation is key to your success!
     </div>
   </div>
 
@@ -449,7 +551,10 @@ a{color:inherit}
 
     <a class="booking-cta booking-cta-dark" href="https://calendar.app.google/KkQUkaiYVQ2Rq3ve6" target="_blank" rel="noopener"><span class="booking-icon">▣</span><span><strong>CHECK AVAILABILITY</strong><small>Book your interview support slot on Google Calendar</small></span><span class="booking-arrow">→</span></a>
 
-    <div class="referral">🎁 GET UPTO 15% REFFERAL BONUS 🎁</div>
+    <details class="affiliate-inline" id="referral-bonus">
+      <summary><span class="affiliate-gift" aria-hidden="true">🎁</span><span class="affiliate-summary-copy"><small>Help your friends</small>GET UPTO 45% REFFERAL BONUS</span><span class="affiliate-toggle">Unlock offer</span></summary>
+      <div class="affiliate-inline-content" data-affiliate-content></div>
+    </details>
 
     <div class="few-notes">
       <h3>FEW NOTES</h3>
@@ -471,6 +576,25 @@ a{color:inherit}
 
 <div class="footer">LEARN. CREATE. HELP. &nbsp; • &nbsp; PRASAD B INTERVIEW PLAYBOOKS</div>
 </main>
+
+<template id="affiliate-offer-template">
+  <div class="affiliate-grid">
+    <article class="affiliate-point"><span class="affiliate-point-number">01</span><h3>Your friend gets <strong>up to 10% off</strong></h3><p>Help someone access professional interview support at a meaningful saving.</p></article>
+    <article class="affiliate-point"><span class="affiliate-point-number">02</span><h3>You get <strong>up to 45% off</strong></h3><p>Monthly tiered referral bonuses:</p><ul class="affiliate-tiers"><li>1st referral → <b>up to 10%</b></li><li>2nd referral → <b>up to 15%</b></li><li>3rd+ referrals → <b>up to 20%</b></li></ul></article>
+    <article class="affiliate-point"><span class="affiliate-point-number">03</span><h3>Chance to win <strong>one free interview</strong></h3><p>One lucky winner annually receives a free interview worth $190.</p><p class="affiliate-note">Yep, you read that right: one free interview for one lucky winner.</p></article>
+  </div>
+  <a class="affiliate-action" href="https://wa.me/?text=I%20had%20great%20experience%20working%20with%20Prasad.%20Feel%20free%20to%20contact%20him%20on%20whatsapp%20%2B91%208087434188" target="_blank" rel="noopener">Refer now on WhatsApp</a>
+</template>
+
+<div class="affiliate-modal" id="affiliate-modal" aria-hidden="true" inert>
+  <section class="affiliate-dialog" role="dialog" aria-modal="true" aria-labelledby="affiliate-modal-title">
+    <button class="affiliate-close" type="button" aria-label="Close affiliate offer">×</button>
+    <div class="affiliate-kicker">Affiliate partner invite</div>
+    <h2 id="affiliate-modal-title">Help your friends and get 3x benefits</h2>
+    <p class="affiliate-dialog-intro">Share an interview-support experience you trust. Your friend saves, your rewards grow, and one referral could unlock a free interview.</p>
+    <div data-affiliate-content></div>
+  </section>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -504,6 +628,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }, {threshold: .45});
 
   counters.forEach(counter => observer.observe(counter));
+
+  const offerTemplate = document.getElementById("affiliate-offer-template");
+  document.querySelectorAll("[data-affiliate-content]").forEach(container => {
+    container.appendChild(offerTemplate.content.cloneNode(true));
+  });
+
+  const lateNightFees = document.getElementById("late-night-fees");
+  const affiliateModal = document.getElementById("affiliate-modal");
+  const affiliateDialog = affiliateModal.querySelector(".affiliate-dialog");
+  const affiliateClose = affiliateModal.querySelector(".affiliate-close");
+  let affiliateShown = false;
+  let lastFocused = null;
+
+  const closeAffiliateModal = () => {
+    affiliateModal.classList.remove("open");
+    affiliateModal.setAttribute("aria-hidden", "true");
+    affiliateModal.inert = true;
+    document.body.classList.remove("modal-open");
+    if (lastFocused) lastFocused.focus();
+  };
+
+  const openAffiliateModal = () => {
+    if (affiliateShown) return;
+    affiliateShown = true;
+    lastFocused = document.activeElement;
+    affiliateModal.inert = false;
+    affiliateModal.classList.add("open");
+    affiliateModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    affiliateClose.focus();
+  };
+
+  affiliateClose.addEventListener("click", closeAffiliateModal);
+  affiliateModal.addEventListener("click", event => {
+    if (!affiliateDialog.contains(event.target)) closeAffiliateModal();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && affiliateModal.classList.contains("open")) closeAffiliateModal();
+  });
+
+  const affiliateObserver = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      openAffiliateModal();
+      affiliateObserver.disconnect();
+    }
+  }, {threshold: .55});
+  affiliateObserver.observe(lateNightFees);
 });
 </script>
 
