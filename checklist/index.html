@@ -37,7 +37,6 @@
     .previewCard{margin-top:15px;padding:16px;border-radius:24px;background:#f8f5ef;border:1px solid var(--line)} .previewHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;color:var(--navy);font-weight:900} .previewImg{width:100%;display:block;border-radius:18px;border:1px solid #ded7ca;box-shadow:0 10px 28px rgba(24,35,41,.08)}
     .videoBox{margin-top:15px;max-width:560px;aspect-ratio:16/9;border-radius:24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 16px 42px rgba(7,56,74,.1);background:#0b1e27} .videoBox iframe{width:100%;height:100%;border:0} .videoCaption{margin-top:10px;color:#8d979b;font-size:13px;font-weight:700}
     .runbrokerImage{width:min(80%,496px);display:block;margin:15px auto 0;border-radius:22px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(7,56,74,.12)}
-    .reviewModal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:22px;background:rgba(7,45,59,.66);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s ease}.reviewModal.show{opacity:1;pointer-events:auto}.reviewBox{position:relative;width:min(520px,100%);padding:30px;border-radius:28px;background:#fffdf8;border:1px solid rgba(255,255,255,.8);box-shadow:0 30px 90px rgba(0,0,0,.28);text-align:center}.reviewBox h2{margin:8px 0 10px;color:var(--navy);font-family:Georgia,serif;font-size:clamp(26px,5vw,38px)}.reviewBox p{margin:0 auto 20px;max-width:420px;color:var(--muted);line-height:1.6}.reviewStars{font-size:28px;letter-spacing:5px;color:#e2a923;margin:6px 0 10px}.reviewClose{position:absolute;top:14px;right:14px;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--navy);font-size:22px;cursor:pointer}.reviewKicker{color:var(--gold);font-size:11px;letter-spacing:.18em;font-weight:950;text-transform:uppercase}
     .sidebar{display:flex;flex-direction:column;gap:22px} .panel{padding:26px} .panel h3,.payments h3{margin:0 0 12px;font-family:Georgia,serif;color:var(--navy);font-size:26px;letter-spacing:-.02em} .panel p{margin:0 0 16px;color:var(--muted);line-height:1.65}.panel.compact{padding:20px}.panel.compact h3{font-size:22px;margin-bottom:8px}.panel.compact p{font-size:13px;line-height:1.5;margin-bottom:12px}
     .quick{display:grid;gap:11px} .quick div{display:flex;align-items:center;gap:12px;padding:13px;border-radius:18px;background:#f8f5ef;border:1px solid var(--line);font-weight:850} .quick span{font-size:22px;animation:bob 2.6s ease-in-out infinite} .quick div:nth-child(2) span{animation-delay:.35s} .quick div:nth-child(3) span{animation-delay:.7s}
     .payments{padding:22px;background:linear-gradient(135deg,#eafff2,#e7efff 75%);border-color:transparent} .payIntro{margin:0 0 14px;color:#557078;font-size:13px;font-weight:750;line-height:1.45}.payList{display:grid;gap:10px}.payRow{display:grid;grid-template-columns:42px 1fr;gap:11px;align-items:start;padding:12px;border-radius:20px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.72)} .payIcon{width:38px;height:38px;border-radius:14px;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:20px;box-shadow:0 8px 20px rgba(7,56,74,.08)} .payLabel{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:950;color:#587078}.payMain{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.payNumber,.payValue{font-size:16px;font-weight:950;letter-spacing:.01em;color:#16313d}.payPerson{display:block;margin-top:4px;color:#5f737b;font-size:12.5px;font-weight:750}.copy{border:0;width:32px;height:32px;border-radius:12px;background:white;color:var(--navy);font-size:15px;font-weight:950;cursor:pointer;box-shadow:0 8px 18px rgba(7,56,74,.08);display:inline-grid;place-items:center;line-height:1;transition:.2s;flex:0 0 auto} .copy:hover{transform:translateY(-1px);background:#fffaf0}.bankDetails{display:grid;gap:8px;margin-top:8px}.bankLine{display:grid;grid-template-columns:78px 1fr 32px;gap:8px;align-items:center;padding:8px 9px;border-radius:14px;background:rgba(255,255,255,.58);border:1px solid rgba(255,255,255,.72)}.bankLine small{color:#6b7d84;font-weight:900}.bankLine strong{color:#16313d;font-size:13.5px;overflow-wrap:anywhere}.copied{font-size:12px;color:var(--green);font-weight:900;min-height:16px;margin-top:10px}
@@ -49,12 +48,155 @@
     @keyframes float{50%{transform:translate(-26px,30px)}} @keyframes spin{to{transform:rotate(360deg)}} @keyframes pulse{50%{box-shadow:0 0 0 13px rgba(239,63,69,.02)}} @keyframes softPulse{50%{transform:translateY(-4px);box-shadow:0 28px 82px rgba(7,56,74,.19)}} @keyframes bob{50%{transform:translateY(-5px)}} @keyframes tilt{50%{transform:rotate(-8deg) scale(1.04)}} @keyframes softFloat{50%{transform:translateY(-8px)}}
     @media(max-width:980px){.hero{grid-template-columns:1fr;padding:32px 24px;text-align:center}.side{writing-mode:horizontal-tb;transform:none;justify-self:center;margin-bottom:18px}.portraitWrap{justify-self:center;margin-top:14px;height:220px;width:230px}.portraitImg{max-height:220px}.grid{grid-template-columns:1fr}.topbar{align-items:stretch;flex-direction:column}.progressWrap{max-width:none}.progressText{text-align:left}}
     @media(max-width:560px){.page{width:min(94vw,1240px);padding-top:18px}.hero{min-height:245px;border-radius:28px}.checklist,.panel,.payments{padding:20px}.item label{font-size:15.5px}.sectionTitle{font-size:27px}.btn{width:100%}.payRow{grid-template-columns:40px 1fr;gap:9px}.bankLine{grid-template-columns:64px 1fr 32px}.payNumber,.payValue{font-size:15px}}
+
+    /* Match the current Prasad B Playbook visual system. */
+    :root{
+      --navy:#000;--navy2:#000;--navy3:#000;
+      --paper:#f4f8f8;--card:#fff;--text:#000;--muted:#647b81;
+      --line:#dce7e7;--gold:#c99719;--gold2:#f4e6b7;
+      --shadow:0 18px 48px rgba(31,57,64,.08),inset 0 1px 0 rgba(255,255,255,.74);
+      --soft:0 10px 28px rgba(31,57,64,.06);--radius:24px;
+    }
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+      color:var(--text);background:linear-gradient(180deg,#fff 0%,#f4f8f8 48%,#edf4f4 100%);
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;opacity:.42;
+      background:radial-gradient(circle at 12% 8%,rgba(255,210,74,.16),transparent 24%),radial-gradient(circle at 90% 24%,rgba(20,93,112,.08),transparent 26%);
+    }
+    .page{position:relative;width:min(1160px,92vw);padding:38px 0 56px}
+    .brand{text-align:center;font-size:38px;font-weight:900;margin:8px 0 30px;color:#000}
+    .brand small{font-size:18px;vertical-align:top}
+    .side{position:fixed;left:12px;bottom:25px;z-index:4;writing-mode:vertical-rl;transform:rotate(180deg);font-size:13px;font-weight:800;color:rgba(0,0,0,.55)}
+    .hero{
+      grid-template-columns:minmax(0,1fr) 260px;gap:30px;min-height:280px;
+      padding:34px 38px;border:0;border-radius:24px;
+      background:rgba(255,255,255,.62);box-shadow:var(--shadow);backdrop-filter:blur(18px);color:#000;
+    }
+    .hero:before{left:0;right:auto;top:22px;bottom:22px;width:4px;height:auto;border-radius:0 4px 4px 0;background:#e3b631;animation:none}
+    .hero:after{display:none}
+    .title{text-align:left}
+    .version{margin-bottom:10px;color:#825a00;font-size:10px;font-weight:900}
+    h1{font-family:inherit;font-size:clamp(38px,4.4vw,62px);line-height:1.06;letter-spacing:0;font-weight:900;color:#000}
+    .subtitle{margin:15px 0 0;max-width:590px;color:#657b81;font-size:14px;font-weight:500;line-height:1.55}
+    .portraitWrap{width:230px;height:240px;justify-self:end}
+    .portraitGlow{width:200px;height:200px;border:0;border-radius:20px;background:#edf3f3;box-shadow:none}
+    .portraitImg{max-height:240px;max-width:215px;filter:grayscale(1) contrast(1.08) drop-shadow(0 12px 18px rgba(0,0,0,.22));animation:none}
+    .topbar{margin:28px 0 22px}
+    .badge{background:rgba(255,255,255,.7);border:0;box-shadow:var(--soft);color:#000;font-size:11px}
+    .progressText{color:#627b82}.progress{background:#e7eeee}.bar{background:linear-gradient(90deg,#c99719,#000)}
+    .grid{grid-template-columns:minmax(0,1fr) 365px;gap:28px}
+    .card{border:0;background:rgba(255,255,255,.62);box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+    .sectionTitle,.panel h3,.payments h3{font-family:inherit;color:#000;letter-spacing:0;font-weight:900}
+    .sectionTitle{font-size:28px}.spark{background:#edf3f3;color:#a87500;animation:none}
+    .item{border-bottom-color:#e4eded}.item label{font-size:16px;color:#17313a}
+    .item strong{color:#000}.item input{border-color:#acbabb;border-radius:8px}
+    .item input:checked{background:#000;border-color:#000}
+    .note{color:#825a00}.subnote,.previewCard,.quick div,.paymentAccordion,.linkCard{background:rgba(237,244,244,.82);border:0}
+    .subnote{color:#607980}.subnote b,.subnote code,.previewHead{color:#000}
+    .subnote code{background:#fff;border-color:#dce7e7}
+    .btn{min-height:44px;border-color:#dce7e7;box-shadow:none;color:#000}
+    .btn:hover{box-shadow:0 8px 22px rgba(31,57,64,.1)}
+    .btn.primary{background:#000;border-color:#000;color:#fff}
+    .btn.gold{background:#fff8df;border-color:#f0dfaa;color:#000}
+    .btn.green{background:#edf5f1;border-color:#d9e8de;color:#0e6b47}
+    .previewImg,.videoBox,.runbrokerImage{border-color:#dce7e7;box-shadow:var(--soft)}
+    .videoCaption,.panel p{color:#657b81}
+    .quick div{border-radius:16px;color:#17313a;font-size:13px}
+    .payments{background:rgba(255,255,255,.62)}
+    .payRow{background:rgba(237,244,244,.82);border:0;border-radius:16px}
+    .payIcon{background:#fff;box-shadow:none}.payLabel{color:#825a00}
+    .payNumber,.payValue,.bankLine strong{color:#000}.payPerson,.payIntro{color:#657b81}
+    .bankLine{background:rgba(255,255,255,.72);border:0}.copy{box-shadow:none}
+    .paymentAccordion summary{color:#000}.paymentAccordion summary:after{border:0}
+    .manualFallback{margin-top:13px;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:rgba(237,244,244,.82)}
+    .manualFallback summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 15px;cursor:pointer;list-style:none;color:#000;font-size:13px;font-weight:900}
+    .manualFallback summary::-webkit-details-marker{display:none}
+    .manualFallback summary:after{content:"+";font-size:20px;color:#825a00;line-height:1}
+    .manualFallback[open] summary:after{content:"−"}
+    .manualFallbackBody{padding:0 15px 15px;color:#607980;font-size:13px;line-height:1.6}
+    .manualFallbackBody ol{margin:0 0 4px;padding-left:20px}
+    .manualFallbackBody li+li{margin-top:6px}
+    .manualFallbackBody code{padding:1px 5px;border:1px solid var(--line);border-radius:6px;background:#fff;color:#000;overflow-wrap:anywhere}
+    .linkCard{color:#000}.linkCard:hover{background:#fff}
+    .adCard{background:rgba(255,255,255,.62);border:0}
+    .adCard:before{display:none}.adKicker{background:#edf3f3;border:0;color:#825a00}
+    .adList li{color:#17313a}.adList li:before{background:#edf3f3;color:#825a00}
+    .footer{padding-top:22px;border-top:1px solid #d4e1e2;color:#607980;font-size:12px}
+    .fab{background:#000;box-shadow:0 13px 30px rgba(0,0,0,.16);animation:none}
+    .successBox{background:#fff;border:0;box-shadow:0 28px 70px rgba(23,49,58,.2)}
+    .successBox h2{font-family:inherit;color:#000;letter-spacing:0}
+    @media(max-width:980px){
+      .hero{grid-template-columns:minmax(0,1fr) 220px;text-align:left}
+      .portraitWrap{width:210px;height:220px;margin-top:0}.portraitImg{max-height:220px}
+      .grid{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      .page{width:min(94vw,700px);padding-top:22px}.brand{font-size:31px;margin:4px 0 22px}.side{display:none}
+      .hero{grid-template-columns:1fr;gap:10px;padding:28px 25px;text-align:left}
+      .portraitWrap{justify-self:center;width:200px;height:190px;margin-top:8px}
+      .portraitGlow{width:175px;height:175px}.portraitImg{max-height:190px}
+    }
+    @media(max-width:560px){
+      .hero{border-radius:20px}.checklist,.panel,.payments{padding:20px}
+      h1{font-size:clamp(35px,9vw,48px)}.subtitle{font-size:13px}
+      .sectionTitle{font-size:24px}.item label{font-size:15px}
+      .payRow{grid-template-columns:40px 1fr}.bankLine{grid-template-columns:64px 1fr 32px}
+    }
+    /* Referral dialog shared with the Interview Playbook. */
+    body.modal-open{overflow:hidden}
+    .affiliate-modal{position:fixed;inset:0;z-index:10020;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.68);backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+    .affiliate-modal.open{opacity:1;visibility:visible}
+    .affiliate-dialog{position:relative;width:min(820px,96vw);max-height:min(90vh,720px);overflow:auto;padding:32px;border:1px solid rgba(255,255,255,.18);border-radius:24px;color:#fff;background:linear-gradient(100deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.72) 52%,rgba(0,0,0,.48) 100%),url("assets/blfrnds.jpg") center/cover no-repeat;box-shadow:0 30px 90px rgba(0,0,0,.5);transform:translateY(18px) scale(.98);transition:transform .25s ease}
+    .affiliate-modal.open .affiliate-dialog{transform:none}
+    .affiliate-close{position:absolute;top:13px;right:13px;display:grid;place-items:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:rgba(0,0,0,.38);color:#fff;font-size:24px;line-height:1;cursor:pointer;backdrop-filter:blur(8px)}
+    .affiliate-kicker{color:#f0cc63;font-size:9px;font-weight:950;text-transform:uppercase}
+    .affiliate-dialog h2{max-width:620px;margin:8px 45px 8px 0;color:#fff;font-size:29px;line-height:1.08}
+    .affiliate-dialog-intro{max-width:650px;margin:0 0 20px;color:rgba(255,255,255,.8);font-size:12px;line-height:1.6}
+    .affiliate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .affiliate-point{min-width:0;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.18);backdrop-filter:blur(10px)}
+    .affiliate-point-number{display:grid;place-items:center;width:28px;height:28px;margin-bottom:11px;border-radius:8px;background:#ffd24a;color:#15252b;font-size:9px;font-weight:950}
+    .affiliate-point h3{margin:0;color:#fff;font-size:14px;line-height:1.4}.affiliate-point h3 strong{color:#f4d36b}
+    .affiliate-point p{margin:8px 0 0;color:rgba(255,255,255,.8);font-size:10px;line-height:1.55}
+    .affiliate-tiers{display:grid;gap:4px;margin:9px 0 0;padding:0;list-style:none;color:rgba(255,255,255,.8);font-size:10px;line-height:1.45}.affiliate-tiers b{color:#f4d36b}
+    .affiliate-note{font-style:italic}
+    .affiliate-action{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:16px;padding:0 20px;border:0;border-radius:999px;background:#fff;color:#000;font-size:11px;font-weight:950;cursor:pointer;transition:background .2s ease}.affiliate-action:hover{background:#f0cc63}
+    .referral-eligibility-note{margin:15px 0 0;padding:12px 0 0;border-top:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.66);font-size:8px;line-height:1.5}.referral-eligibility-note strong{color:#f0cc63}
+    .affiliate-offer-view[hidden],.referral-generator[hidden],.referral-result[hidden]{display:none!important}
+    .referral-back{display:inline-flex;align-items:center;gap:7px;margin:0 0 15px;padding:0;border:0;background:transparent;color:rgba(255,255,255,.75);font:inherit;font-size:9px;font-weight:850;text-transform:uppercase;cursor:pointer}
+    .referral-back:before{content:"";width:6px;height:6px;border-left:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+    .referral-generator-intro{max-width:590px;margin:0 0 20px;color:rgba(255,255,255,.78);font-size:11px;line-height:1.55}
+    .referral-code-form{display:grid;gap:13px}.referral-phone-grid{display:grid;grid-template-columns:minmax(150px,.72fr) minmax(0,1.28fr);gap:10px}
+    .referral-field{display:grid;gap:7px;color:rgba(255,255,255,.72);font-size:8px;font-weight:900;text-transform:uppercase}
+    .referral-field select,.referral-field input{width:100%;min-height:48px;padding:0 14px;border:1px solid rgba(255,255,255,.22);border-radius:10px;outline:0;background:rgba(255,255,255,.13);color:#fff;font:inherit;font-size:13px;font-weight:750;text-transform:none;backdrop-filter:blur(10px)}
+    .referral-field select{color-scheme:dark;cursor:pointer}.referral-field input::placeholder{color:rgba(255,255,255,.48)}
+    .referral-field select:focus,.referral-field input:focus{border-color:#f0cc63;box-shadow:0 0 0 3px rgba(240,204,99,.16)}
+    .referral-generate{min-height:48px;border:0;border-radius:999px;background:#f0cc63;color:#000;font:inherit;font-size:11px;font-weight:950;cursor:pointer}
+    .referral-error{min-height:17px;margin:0;color:#ffd3d3;font-size:9px;font-weight:800}
+    .referral-result{margin-top:4px;padding:17px;border:1px solid rgba(255,255,255,.2);border-radius:14px;background:rgba(255,255,255,.13);backdrop-filter:blur(12px)}
+    .referral-result-label{margin:0 0 8px;color:rgba(255,255,255,.62);font-size:7px;font-weight:900;text-transform:uppercase}
+    .referral-code-row{display:flex;align-items:center;justify-content:space-between;gap:12px}.referral-code-value{color:#fff;font-size:27px;font-weight:950;overflow-wrap:anywhere}
+    .referral-copy{min-height:36px;padding:0 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(0,0,0,.25);color:#fff;font:inherit;font-size:8px;font-weight:900;cursor:pointer}
+    .referral-share-copy{margin:13px 0 0;color:rgba(255,255,255,.78);font-size:9px;line-height:1.5}
+    .referral-share{display:flex;width:100%;min-height:46px;margin-top:13px;align-items:center;justify-content:center;border-radius:999px;background:#fff;color:#000;text-decoration:none;font-size:10px;font-weight:950}
+    .referral-status{min-height:15px;margin:8px 0 0;color:#f0cc63;font-size:8px;font-weight:850}
+    @media(max-width:700px){
+      .affiliate-modal{align-items:end;padding:10px}.affiliate-dialog{width:100%;max-height:78vh;padding:19px 15px 15px;border-radius:24px 24px 14px 14px;background:linear-gradient(160deg,rgba(0,0,0,.9),rgba(0,0,0,.67)),url("assets/blfrnds.jpg") center/cover no-repeat}
+      .affiliate-dialog h2{margin:4px 44px 8px 0;font-size:20px}.affiliate-dialog-intro{display:none}
+      .affiliate-grid{grid-template-columns:1fr;gap:7px}.affiliate-point{display:grid;grid-template-columns:30px 1fr;align-items:center;gap:9px;padding:9px 10px}
+      .affiliate-point-number{margin:0}.affiliate-point h3{font-size:12px}.affiliate-point p,.affiliate-tiers,.affiliate-note{display:none}
+      .affiliate-action{width:100%;margin-top:10px}.affiliate-close{top:7px;right:7px;width:44px;height:44px}
+    }
+    @media(max-width:600px){.referral-phone-grid{grid-template-columns:1fr}.referral-generator-intro{font-size:10px}.referral-result{padding:14px}.referral-code-value{font-size:23px}}
+    @media(prefers-reduced-motion:reduce){.btn,.linkCard,.bar{transition:none}}
   </style>
 </head>
 <body>
+  <div class="side">LEARN. CREATE. HELP.</div>
   <main class="page">
+    <div class="brand"><small>©</small> PRASAD B</div>
     <header class="hero">
-      <div class="side">BY PRASAD B.</div>
       <div class="title">
         <div class="version">V7.2.0</div>
         <h1>Pre-Interview<br>Checklist</h1>
@@ -173,15 +315,50 @@
     </div>
   </div>
 
-  <div class="reviewModal" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle" aria-hidden="true">
-    <div class="reviewBox">
-      <button class="reviewClose" id="reviewClose" type="button" aria-label="Close Google review request">×</button>
-      <div class="reviewKicker">A small favour</div>
-      <div class="reviewStars" aria-label="Five stars">★★★★★</div>
-      <h2 id="reviewTitle">Could you leave a Google review?</h2>
-      <p>If this checklist helped you prepare, a quick 5-star Google Business review would mean a lot and help others find this support too.</p>
-      <a class="btn primary" href="https://g.page/r/CaP8yUF9rRZfEBM/review" target="_blank" rel="noopener">⭐ Leave a 5-star review</a>
-    </div>
+  <div class="affiliate-modal" id="affiliate-modal" aria-hidden="true" inert>
+    <section class="affiliate-dialog" role="dialog" aria-modal="true" aria-labelledby="affiliate-modal-title">
+      <button class="affiliate-close" type="button" aria-label="Close referral offer">×</button>
+      <div class="affiliate-offer-view">
+        <div class="affiliate-kicker">Affiliate partner invite</div>
+        <h2 id="affiliate-modal-title">Help your friends and get 3x benefits</h2>
+        <p class="affiliate-dialog-intro">Share an interview-support experience you trust. Your friend saves, your rewards grow, and one referral could unlock a free interview.</p>
+        <div class="affiliate-grid">
+          <article class="affiliate-point"><span class="affiliate-point-number">01</span><h3>Your friend gets <strong>up to 10% off</strong></h3><p>Help someone access professional interview support at a meaningful saving.</p></article>
+          <article class="affiliate-point"><span class="affiliate-point-number">02</span><h3>You get <strong>up to 45% off</strong></h3><p>Monthly tiered referral bonuses:</p><ul class="affiliate-tiers"><li>1st referral → <b>up to 10%</b></li><li>2nd referral → <b>up to 15%</b></li><li>3rd+ referrals → <b>up to 20%</b></li></ul></article>
+          <article class="affiliate-point"><span class="affiliate-point-number">03</span><h3>Chance to win <strong>one free interview</strong></h3><p>One lucky winner annually receives a free interview worth $190.</p><p class="affiliate-note">Yep, you read that right: one free interview for one lucky winner.</p></article>
+        </div>
+        <button class="affiliate-action referral-generator-open" type="button">Refer Now</button>
+        <p class="referral-eligibility-note"><strong>New clients only.</strong> This referral benefit applies to the referred client’s first eligible booking. It is a one-time introductory benefit and does not apply again to every future call or session.</p>
+      </div>
+      <div class="referral-generator" hidden aria-hidden="true">
+        <button class="referral-back" type="button">Back to benefits</button>
+        <div class="affiliate-kicker">Your referral code</div>
+        <h2 id="referral-generator-title">Create a code. Share the value.</h2>
+        <p class="referral-generator-intro">Enter your phone number once. The same number always generates the same consistent referral code.</p>
+        <form class="referral-code-form" id="referral-code-form" autocomplete="off">
+          <div class="referral-phone-grid">
+            <label class="referral-field">Country code
+              <select id="referral-country" aria-label="Country code">
+                <option value="+91">India (+91)</option><option value="+1">USA / Canada (+1)</option><option value="+44">United Kingdom (+44)</option><option value="+61">Australia (+61)</option><option value="+971">UAE (+971)</option><option value="+65">Singapore (+65)</option><option value="+64">New Zealand (+64)</option><option value="+49">Germany (+49)</option><option value="+33">France (+33)</option><option value="+31">Netherlands (+31)</option><option value="+353">Ireland (+353)</option><option value="+974">Qatar (+974)</option><option value="+966">Saudi Arabia (+966)</option><option value="+27">South Africa (+27)</option><option value="+81">Japan (+81)</option>
+              </select>
+            </label>
+            <label class="referral-field">Phone number
+              <input id="referral-phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="Without country code" required />
+            </label>
+          </div>
+          <p class="referral-error" id="referral-error" role="alert"></p>
+          <button class="referral-generate" type="submit">Generate my referral code</button>
+          <section class="referral-result" id="referral-result" aria-live="polite" hidden>
+            <p class="referral-result-label">Your referral code</p>
+            <div class="referral-code-row"><strong class="referral-code-value" id="referral-code">--</strong><button class="referral-copy" id="referral-copy" type="button">Copy code</button></div>
+            <p class="referral-share-copy">Share your experience and give your friend a simple code to mention when they contact Prasad.</p>
+            <a class="referral-share" id="referral-share" href="#" target="_blank" rel="noopener">Share now on WhatsApp</a>
+            <p class="referral-status" id="referral-status"></p>
+          </section>
+        </form>
+        <p class="referral-eligibility-note"><strong>New clients only.</strong> The referral benefit applies to the new client’s first eligible booking and is not repeated on every future call or session.</p>
+      </div>
+    </section>
   </div>
 
 <script>
@@ -237,19 +414,18 @@ const checklist = [
   {t:'Fill the form to share J.D. & resume', buttons:[{txt:'📝 Open This Form',href:'https://forms.gle/uuJZQV55D8MuAU169',cls:'primary'}]},
   {t:'Book time slot (per your machine timezone) on below calendar <strong>Only if confirmed</strong>', sub:'Discuss with Prasad if time-slot not available, sometimes it is cancelled or mistakenly booked', buttons:[{txt:'📅 Book Time Slot',href:googleBookingLink,cls:'gold'}]},
   {t:'Share / prepare the introduction script'},
+  {t:'Install Runbroker only if you need an invisible window <span class="note">v5.0.2 · if required</span>', sub:'If you already have a double-desktop setup like the example below, you do not need Runbroker. Install it only when you do not have a second display and need the interview support window to stay hidden.<br><br>1. If the app download is blocked, temporarily disable antivirus or firewall. The app is safe, but some systems flag <b>.exe files</b>.<br>2. After opening it, share the <b>machine fingerprint</b> with Prasad.', image:'assets/laptop_desktop.png', imageAlt:'Laptop connected to a large external monitor showing a double-desktop setup', buttons:[{txt:'⬇ Download Runbroker v5.0.3 exe',href:'https://drive.google.com/drive/folders/1OfiRm4mKrBBFSyPHgxXdREqkb-AnEHeQ?usp=sharing',cls:'primary'}]},
   {t:'Install screen-sharing software using tutorial link', video:true},
   {t:'Make sure you see Orange Machine & set <strong>6 digit code</strong>', preview:true},
-  {t:'Hide the remote desktop popup', sub:'1. Download the popup fix zip from the link below.<br>2. Unzip it and copy the new DLL into <code>C:\\Program Files (x86)\\Google\\Chrome Remote Desktop\\151.0.xxx.xx</code>.<br>3. Rename the original file: <code>remoting_core.dll</code> to <code>remoting_core_orig.dll</code>.<br>4. Rename the new file: <code>rc_new.dll</code> to <code>remoting_core.dll</code>.', buttons:[{txt:'⬇ Download Popup Fix',href:'https://drive.google.com/file/d/1D_70Cu6qhnKN20oi211jZsqKIcmG7nl5/view?usp=drive_link',cls:'primary'}]},
+  {t:'Hide the remote desktop popup', sub:'Open <b>RuntimeBroker</b> and go to the last tab, <b>Remote Update</b>. Click <b>Scan Again</b>, then <b>Download + Install</b>. Confirm that the logs are green.', buttons:[{txt:'⬇ Download Runbroker v5.0.3 exe',href:'https://drive.google.com/drive/folders/1OfiRm4mKrBBFSyPHgxXdREqkb-AnEHeQ?usp=sharing',cls:'primary'}], extra:'<details class="manualFallback"><summary>If it does not work, use the manual instructions</summary><div class="manualFallbackBody"><ol><li>Download the popup fix zip from the link below.</li><li>Unzip it and copy the new DLL into <code>C:\\Program Files (x86)\\Google\\Chrome Remote Desktop\\151.0.xxx.xx</code>.</li><li>Rename the original file from <code>remoting_core.dll</code> to <code>remoting_core_orig.dll</code>.</li><li>Rename the new file from <code>rc_new.dll</code> to <code>remoting_core.dll</code>.</li></ol><div class="btns"><a class="btn primary" href="https://drive.google.com/file/d/1D_70Cu6qhnKN20oi211jZsqKIcmG7nl5/view?usp=drive_link" target="_blank" rel="noopener">⬇ Download Popup Fix</a></div></div></details>'},
   {t:'Use Windows machine 🪟'},
   {t:'<strong>Don’t</strong> install or login Otter with shared credentials'},
   {t:'Open & check Otter link on separate PC / phone <span class="note">not on same desktop</span>'},
-  {t:'Install Runbroker only if you need an invisible window <span class="note">v5.0.2 · if required</span>', sub:'If you already have a double-desktop setup like the example below, you do not need Runbroker. Install it only when you do not have a second display and need the interview support window to stay hidden.<br><br>1. If the app download is blocked, temporarily disable antivirus or firewall. The app is safe, but some systems flag <b>.exe files</b>.<br>2. After opening it, share the <b>machine fingerprint</b> with Prasad.', image:'assets/laptop_desktop.png', imageAlt:'Laptop connected to a large external monitor showing a double-desktop setup', buttons:[{txt:'⬇ Download Runbroker',href:'https://drive.google.com/drive/folders/1OfiRm4mKrBBFSyPHgxXdREqkb-AnEHeQ?usp=sharing',cls:'primary'}]},
-  {t:'Share Gmail credentials <span class="note">if required</span>', reviewTrigger:true, sub:'1. Share credentials only for the Gmail ID used while setting up Remote Desktop.<br>2. Do not share direct credentials.<span class="dangerNote">Use the Runbroker app and share the encrypted message only.</span>'},
+  {t:'Share Gmail credentials <span class="note">if required</span>', referralTrigger:true, sub:'1. Share credentials only for the Gmail ID used while setting up Remote Desktop.<br>2. Do not share direct credentials.<span class="dangerNote">Use the Runbroker app and share the encrypted message only.</span>'},
   {t:'Sign in interview with Gmail in Chrome'},
   {t:'Check the camera & mic setting 15 mins before call with RunBroker App'},
   {t:'Close all unnecessary tabs, windows, screens and system tray icons'},
-  {t:'Pre-pay the fees prior to confirm slot booking', extra:paymentDetailsHtml},
-  {t:'Join WhatsApp community for regular offers, newsletter & lucky draw', buttons:[{txt:'💬 Join WhatsApp Community',href:'https://whatsapp.com/channel/0029Va4yIfdDzgTJNE9Q133q',cls:'green'}]}
+  {t:'Pre-pay the fees prior to confirm slot booking', extra:paymentDetailsHtml}
 ];
 const root=document.getElementById('items');
 document.getElementById('quickBookingLink').href=googleBookingLink;
@@ -261,12 +437,13 @@ checklist.forEach((x,i)=>{
   const sub=x.sub?`<span class="subnote">${x.sub}${x.image?`<img class="runbrokerImage" src="${x.image}" alt="${x.imageAlt||''}">`:''}</span>`:'';
   const extra=x.extra?`<div class="itemExtra">${x.extra}</div>`:'';
   row.innerHTML=`<input type="checkbox" id="c${i}"><label for="c${i}">${x.t}${sub}${btns}${video}${preview}</label>${extra}`;
-  if(x.reviewTrigger) row.dataset.reviewTrigger='true';
+  if(x.referralTrigger) row.dataset.referralTrigger='true';
   root.appendChild(row);
 });
 const boxes=[...document.querySelectorAll('input[type="checkbox"]')],done=document.getElementById('done'),total=document.getElementById('total'),bar=document.getElementById('bar');
-total.textContent=boxes.length;boxes.forEach((b,i)=>{b.checked=localStorage.getItem('precheck-'+i)==='1';b.addEventListener('change',()=>{localStorage.setItem('precheck-'+i,b.checked?'1':'0');update();})});
-const gmailReviewCheckbox=boxes[10];if(gmailReviewCheckbox)gmailReviewCheckbox.addEventListener('change',showReview);
+// Keep existing saved progress attached to its original step after reordering.
+const originalStepIndices=[0,1,2,9,3,4,5,6,7,8,10,11,12,13,14];
+total.textContent=boxes.length;boxes.forEach((b,i)=>{const key='precheck-'+originalStepIndices[i];b.checked=localStorage.getItem(key)==='1';b.addEventListener('change',()=>{localStorage.setItem(key,b.checked?'1':'0');update();})});
 
 const successModal=document.getElementById('successModal');
 const successClose=document.getElementById('successClose');
@@ -282,14 +459,95 @@ function closeSuccess(){
 successClose.addEventListener('click',closeSuccess);
 successModal.addEventListener('click',(e)=>{if(e.target===successModal)closeSuccess();});
 document.addEventListener('keydown',(e)=>{if(e.key==='Escape' && successModal.classList.contains('show'))closeSuccess();});
-const reviewModal=document.getElementById('reviewModal'),reviewClose=document.getElementById('reviewClose');let reviewShown=false;
-function closeReview(){reviewModal.classList.remove('show');reviewModal.setAttribute('aria-hidden','true');}
-function showReview(){if(reviewShown)return;reviewShown=true;reviewModal.classList.add('show');reviewModal.setAttribute('aria-hidden','false');reviewClose.focus();}
-reviewClose.addEventListener('click',closeReview);reviewModal.addEventListener('click',(e)=>{if(e.target===reviewModal)closeReview();});
-document.addEventListener('keydown',(e)=>{if(e.key==='Escape' && reviewModal.classList.contains('show'))closeReview();});
-const reviewTrigger=document.querySelector('[data-review-trigger]');
-function checkReviewTrigger(){if(!reviewTrigger||reviewShown)return;const bounds=reviewTrigger.getBoundingClientRect();if(bounds.top<window.innerHeight*.82&&bounds.bottom>0){showReview();window.removeEventListener('scroll',checkReviewTrigger);}}
-if(reviewTrigger){window.addEventListener('scroll',checkReviewTrigger,{passive:true});document.addEventListener('scroll',checkReviewTrigger,{passive:true,capture:true});window.addEventListener('wheel',checkReviewTrigger,{passive:true});reviewTrigger.addEventListener('click',showReview);setTimeout(checkReviewTrigger,250);}
+const affiliateModal=document.getElementById('affiliate-modal');
+const affiliateDialog=affiliateModal.querySelector('.affiliate-dialog');
+const affiliateClose=affiliateModal.querySelector('.affiliate-close');
+const affiliateOfferView=affiliateModal.querySelector('.affiliate-offer-view');
+const referralGenerator=affiliateModal.querySelector('.referral-generator');
+const referralBack=affiliateModal.querySelector('.referral-back');
+const referralForm=document.getElementById('referral-code-form');
+const referralCountry=document.getElementById('referral-country');
+const referralPhone=document.getElementById('referral-phone');
+const referralError=document.getElementById('referral-error');
+const referralResult=document.getElementById('referral-result');
+const referralCode=document.getElementById('referral-code');
+const referralCopy=document.getElementById('referral-copy');
+const referralShare=document.getElementById('referral-share');
+const referralStatus=document.getElementById('referral-status');
+const referralSecret='IntSup-ISP-Partner-ID-v1-2026';
+let referralShown=false,lastFocused=null,currentReferralCode='';
+function setReferralView(view){
+  const showGenerator=view==='generator';
+  affiliateOfferView.hidden=showGenerator;
+  referralGenerator.hidden=!showGenerator;
+  referralGenerator.setAttribute('aria-hidden',String(!showGenerator));
+  affiliateDialog.setAttribute('aria-labelledby',showGenerator?'referral-generator-title':'affiliate-modal-title');
+  if(showGenerator)setTimeout(()=>referralPhone.focus(),0);
+}
+function closeReferral(){
+  affiliateModal.classList.remove('open');
+  affiliateModal.setAttribute('aria-hidden','true');
+  affiliateModal.inert=true;
+  document.body.classList.remove('modal-open');
+  if(lastFocused)lastFocused.focus();
+}
+function showReferral(){
+  if(referralShown)return;
+  referralShown=true;
+  lastFocused=document.activeElement;
+  setReferralView('offer');
+  affiliateModal.inert=false;
+  affiliateModal.classList.add('open');
+  affiliateModal.setAttribute('aria-hidden','false');
+  document.body.classList.add('modal-open');
+  affiliateClose.focus();
+}
+affiliateClose.addEventListener('click',closeReferral);
+affiliateModal.addEventListener('click',e=>{if(!affiliateDialog.contains(e.target))closeReferral();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&affiliateModal.classList.contains('open'))closeReferral();});
+affiliateModal.querySelector('.referral-generator-open').addEventListener('click',()=>setReferralView('generator'));
+referralBack.addEventListener('click',()=>setReferralView('offer'));
+const normalizePhone=value=>value.replace(/\D/g,'').replace(/^0+/,'');
+async function createReferralCode(countryCode,phone){
+  const encoder=new TextEncoder();
+  const payload=`${countryCode.replace(/\D/g,'')}|${normalizePhone(phone)}`;
+  const key=await crypto.subtle.importKey('raw',encoder.encode(referralSecret),{name:'HMAC',hash:'SHA-256'},false,['sign']);
+  const signature=new Uint8Array(await crypto.subtle.sign('HMAC',key,encoder.encode(payload)));
+  let value=0n;
+  for(const byte of signature.slice(0,8))value=(value<<8n)+BigInt(byte);
+  return `PB${String(value%10000000n).padStart(7,'0')}`;
+}
+referralForm.addEventListener('submit',async e=>{
+  e.preventDefault();referralError.textContent='';referralStatus.textContent='';
+  const phone=normalizePhone(referralPhone.value);
+  if(phone.length<6||phone.length>15){referralError.textContent='Enter a valid phone number without the country code.';referralResult.hidden=true;return;}
+  try{
+    currentReferralCode=await createReferralCode(referralCountry.value,phone);
+    const message=`I had great experience working with Prasad. Feel free to contact him on whatsapp +91 8087434188. Both you and me will get 10$ off. Please use this referral code: ${currentReferralCode}.`;
+    referralCode.textContent=currentReferralCode;
+    referralShare.href=`https://wa.me/?text=${encodeURIComponent(message)}`;
+    referralResult.hidden=false;
+  }catch(error){referralError.textContent='The referral code could not be generated. Please try again.';referralResult.hidden=true;}
+});
+referralCopy.addEventListener('click',async()=>{
+  if(!currentReferralCode)return;
+  try{await navigator.clipboard.writeText(currentReferralCode);referralStatus.textContent='Referral code copied';}
+  catch(error){referralStatus.textContent='Copy is not available in this browser';}
+  setTimeout(()=>referralStatus.textContent='',1800);
+});
+const referralTrigger=document.querySelector('[data-referral-trigger]');
+function checkReferralTrigger(){
+  if(!referralTrigger||referralShown)return;
+  const bounds=referralTrigger.getBoundingClientRect();
+  if(bounds.top<window.innerHeight*.82&&bounds.bottom>0){showReferral();window.removeEventListener('scroll',checkReferralTrigger);}
+}
+if(referralTrigger){
+  window.addEventListener('scroll',checkReferralTrigger,{passive:true});
+  document.addEventListener('scroll',checkReferralTrigger,{passive:true,capture:true});
+  window.addEventListener('wheel',checkReferralTrigger,{passive:true});
+  referralTrigger.addEventListener('click',showReferral);
+  setTimeout(checkReferralTrigger,250);
+}
 function update(){
   const n=boxes.filter(b=>b.checked).length;
   done.textContent=n;
